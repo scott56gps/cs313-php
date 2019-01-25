@@ -1,0 +1,37 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+https://scott-nicholes-313-homepage.herokuapp.com/home.php
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+I am unsure of how to add the code to one GitHub repository.  I don't want to make multiple repositories, one for each project of the semester.  I will talk with Brother Burton on Monday on how he wants me to do this.
+
+I will post the heroku git link here:
+https://git.heroku.com/scott-nicholes-313-homepage.git
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+The nav-bar and all required elements of the page are working.  I included a timestamp of Italy time.
+
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+There are some styles that I don't have working quite right.  For reasons of turning in the assignment on time, I refrained from making the body text indent flush with the header indents.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+I think the coolest thing I learned from this assignment was how to integrate PHP into my webpage.  On top of that was learning about conditional statements and how they go right into the HTML.  Another thing I learned was how to get and set Session variables.  This was a long process, and I learned a lot about going from one page to another.  I see how PHP is different than JavaScript.  PHP seems more page driven, where JavaScript is code driven.
+
+6. What is the difference between an HTTP Get and Post? When should each be used?
+A GET request means that data is to be retrieved.  For instance, if I want to get my photos, I make a GET request.
+
+A POST request means that data is to be sent and saved somewhere.  So, if I want to add photos to my library, I make a POST request.
+
+7. Please select the category you feel best describes your assignment:
+1 - Some attempt was made
+2 - Developing, but significantly deficient
+3 - Slightly deficient, but still mostly adequate
+4 - Meets requirements
+-> 5 - Shows creativity and excels above and beyond requirements
+
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+Because I added some intermediate skill css, did some research into finding how to format timestamps for different locales and learned more about PHP conditional statements and how to use them in HTML, I feel a 5 is an accurate grade for this assignment.
+

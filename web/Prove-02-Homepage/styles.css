@@ -1,0 +1,65 @@
+body {
+    background-color: blue;
+}
+
+.activeNav {
+    background-color: yellow;
+}
+
+.navBar .activeNav a {
+    color: black;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(84, 26, 139, 0.726);
+}
+
+.navBar li {
+    float: left;
+}
+
+.navBar li:hover {
+    background-color: maroon;
+}
+
+.navBar a {
+    display: block;
+    padding: 8px;
+    color: white;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 16px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 16px 16px;
+    background-color: white;
+    border-radius: 25px;
+    margin-bottom: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: auto;
+}
+
+.card h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card img {
+    height: 10%;
+    width: 20%;
+    float: left;
+    padding: 16px 16px;
+}
