@@ -3,7 +3,6 @@
     <head>
         <title>About Us - Edna's Costume Shop</title>
         <link href="styles.css" rel="stylesheet" />
-        <script src="browse.js"></script>
     </head>
     <body>
         <?php
@@ -29,4 +28,5 @@
             </div>
         </div>
     </body>
+    <script src="browse.js"></script>
 </html>
