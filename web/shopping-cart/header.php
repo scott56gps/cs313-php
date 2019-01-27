@@ -1,4 +1,5 @@
 <?php
+session_start();
 $activePage = basename($_SERVER['PHP_SELF'], ".php");
 ?>
 <div class="header">
