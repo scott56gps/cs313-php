@@ -2,47 +2,8 @@ body {
     background-color: #442713;
 }
 
-.row {
-    display: flex;
-}
-
-.column {
-    flex: 33.33%;
-    padding: 5px;
-}
-
-.activeNav {
-    background-color: yellow;
-}
-
-.navBar .activeNav a {
-    color: black;
-}
-
 .header h1 {
     text-align: center;
-}
-
-.navBar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(48, 25, 255);
-}
-
-.navBar li {
-    float: left;
-}
-
-.navBar li:hover {
-    background-color: maroon;
-}
-
-.navBar a {
-    display: block;
-    padding: 8px;
-    color: white;
 }
 
 h2 {
