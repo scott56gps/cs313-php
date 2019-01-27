@@ -3,6 +3,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 ?>
 <div class="header">
     <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Count_von_Count_kneeling.png/200px-Count_von_Count_kneeling.png" />
         <h1>The Count's Organ Mercantile</h1>
     </div>
     <!-- <ul class="navBar">

@@ -11,7 +11,8 @@
         <div class="main-content">
             <h2>Browse</h2>
             <div class="card">
-                <h3>Cool Surfboard</h3>
+                <img src="https://pipeorgandatabase.org/photos/CA/SanFrancisco.DaviesSympho.FratelliRu.1020.222726.jpg" />
+                <h3>Ruffati - Davies Concert Hall</h3>
             </div>
             <div class="card">
                 <h3>Awesome Surfboard</h3>
