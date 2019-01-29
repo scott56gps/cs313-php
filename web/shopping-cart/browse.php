@@ -12,14 +12,14 @@
             <h2>Browse</h2>
             <div class="card">
                 <h3>Ruffati - Davies Concert Hall</h3>
-                <img src="https://pipeorgandatabase.org/photos/CA/SanFrancisco.DaviesSympho.FratelliRu.1020.222726.jpg" />
+                <img id="rufatti-image" src="https://pipeorgandatabase.org/photos/CA/SanFrancisco.DaviesSympho.FratelliRu.1020.222726.jpg" />
                 <span id="rufatti-feedback"></span>
-                <select id="quantity">
+                <select id="rufatti-quantity">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
-                <button id="ruffati-add-cart">Add To Cart</button>
+                <button id="rufatti" onclick="parseItem(this.id);">Add To Cart</button>
             </div>
             <div class="card">
                 <h3>Awesome Surfboard</h3>
