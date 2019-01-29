@@ -3,6 +3,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 ?>
 <div id="nav-card" class="card">
     <?php
+    echo $activePage;
     switch ($activePage) {
         case 'browse':
             echo '<h2>Browse</h2>';
