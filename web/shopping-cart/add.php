@@ -28,8 +28,6 @@ if (array_key_exists($id, $_SESSION)) {
     $_SESSION["id"] = json_encode($itemObject);
 }
 
-echo 'Hola :)';
-
 header('Location: browse.php');
 exit;
 ?>
