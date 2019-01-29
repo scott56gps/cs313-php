@@ -10,7 +10,8 @@ function postItem(id, quantity, imageUrl) {
 
     // Receive returned data and report success to the user
     request.onreadystatechange = () => {
-        if (this.readyState == 4 && this.status == 200) {
+        console.log(this.status);
+        if (this.readyState == 4 && this.status >= 300 && this.status < 400) {
             console.log('I have returned :)');
             console.log(request.responseText);
             var feedbackElement = document.getElementById(`${id}-feedback`);
