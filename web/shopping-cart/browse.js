@@ -3,6 +3,8 @@ function clearTextTimeout(element) {
 }
 
 function postItem(id, quantity, imageUrl) {
+    console.log('IN POST ITEM');
+
     // Create AJAX Request
     var request = new XMLHttpRequest();
 
@@ -22,7 +24,6 @@ function postItem(id, quantity, imageUrl) {
 }
 
 function parseItem(id) {
-    console.log('IN PARSE ITEM');
     // Get the Quantity and Image URL for this id
     var quantityElement = document.getElementById(`${id}-quantity`);
     var imageElement = document.getElementById(`${id}-image`);
