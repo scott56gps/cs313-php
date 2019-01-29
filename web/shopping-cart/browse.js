@@ -11,6 +11,7 @@ function postItem(id, quantity, imageUrl) {
     // Receive returned data and report success to the user
     request.onreadystatechange = () => {
         if (this.readyState == 4 && this.status == 200) {
+            console.log('I have returned :)');
             console.log(request.responseText);
             var feedbackElement = document.getElementById(`${id}-feedback`);
             feedbackElement.innerHTML = 'Added to Cart';
