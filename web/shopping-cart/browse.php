@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About Us - Edna's Costume Shop</title>
+        <title>Scott's Organ Mercantile</title>
         <link href="styles.css" rel="stylesheet" />
     </head>
     <body>
