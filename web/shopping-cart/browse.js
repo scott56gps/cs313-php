@@ -12,7 +12,7 @@ function postItem(id, quantity, imageUrl) {
     request.onreadystatechange = () => {
         console.log(request.status);
         
-        if (request.readyState == 4 && ((request.status >= 300 && request.status < 400) || request.status == 200)) {
+        if (request.readyState == 4 && request.status == 200) {
             console.log('I have returned :)');
             console.log(request.responseText);
             var feedbackElement = document.getElementById(`${id}-feedback`);
