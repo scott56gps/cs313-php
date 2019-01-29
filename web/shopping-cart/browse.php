@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$itemCount = 0;
+foreach ($_SESSION as $key => $value) {
+    if ($key != "Address") {
+        $itemCount = $itemCount + 1;
+    }
+}
+
+// echo $itemCount;
+?>
 <!DOCTYPE html>
 <html>
     <head>
