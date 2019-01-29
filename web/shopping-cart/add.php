@@ -1,16 +1,18 @@
 <?php
 session_start();
 
-function createItemObject($id, $quantity) {
-    switch ($id) {
-        case 'rufatti':
-        
-    }
-} 
+function createItemObject($id, $quantity, $imageUrl) {
+    $itemObject->id = $id;
+    $itemObject->quantity = $quantity;
+    $itemObject->imageUrl = $imageUrl;
+
+    return $itemObject;
+}
 
 // Receive the id from the POST request
 $id = htmlspecialchars($_POST["id"]);
 $quantity = htmlspecialchars($_POST["quantity"]);
+$imageUrl = htmlspecialchars($_POST["imageUrl"]);
 
 // IF the id is already found in the Session Variables
 if (array_key_exists($id, $_SESSION)) {
@@ -22,6 +24,19 @@ if (array_key_exists($id, $_SESSION)) {
     $_SESSION["id"] = json_encode($itemObject);
 } else {
     // Create an association in Session for this id
-
+    $itemObject = createItemObject($id, $quantity, $imageUrl);
+    $_SESSION["id"] = $itemObject;
 }
+
+$itemCount = 0;
+foreach ($_SESSION as $key => $value) {
+    if ($key != "Address") {
+        $itemCount = $itemCount + 1;
+    }
+}
+
+echo $itemCount;
+
+header('Location: browse.php');
+exit;
 ?>
