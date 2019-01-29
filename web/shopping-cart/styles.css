@@ -21,6 +21,10 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#nav-card {
+    background-color: white;
+}
+
 .card h3 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

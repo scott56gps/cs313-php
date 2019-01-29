@@ -21,7 +21,9 @@ foreach ($_SESSION as $key => $value) {
         include 'header.php';
         ?>
         <div class="main-content">
-            <h2>Browse</h2>
+            <?php
+            include 'nav-card.php';
+            ?>
             <div class="card">
                 <h3>Ruffati - Davies Concert Hall</h3>
                 <img id="rufatti-image" src="https://pipeorgandatabase.org/photos/CA/SanFrancisco.DaviesSympho.FratelliRu.1020.222726.jpg" />
