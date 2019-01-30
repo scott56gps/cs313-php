@@ -31,7 +31,7 @@ function createItemObject($id, $name, $quantity, $imageUrl) {
             foreach ($_SESSION as $key => $value) {
                 if ($key != "Address") {
                     // Generate a new object
-                    $itemObject = json_decode($_SESSION[$key], TRUE);
+                    $itemObject = json_decode($_SESSION[$key], FALSE);
                     echo $itemObject;
 
                     echo '<div class="card">
