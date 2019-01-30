@@ -45,4 +45,9 @@ $_SESSION["Address"] = $address;
             ?>
         </div>
     </body>
+    <script>
+        document.getElementById('back-to-browse-button').addEventListener('click', () => {
+            window.open('browse.php', '_self');
+        });
+    </script>
 </html>
