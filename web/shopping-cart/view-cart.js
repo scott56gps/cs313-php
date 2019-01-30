@@ -22,3 +22,7 @@ function removeItem(id) {
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     request.send('id=' + id);
 }
+
+document.getElementById('back-to-browse-button').addEventListener('click', () => {
+    window.open('browse.php', '_self');
+});
