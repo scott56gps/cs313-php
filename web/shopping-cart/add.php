@@ -3,6 +3,7 @@ session_start();
 
 function createItemObject($id, $name, $quantity, $imageUrl) {
     $itemObject->id = $id;
+    $itemObject->name = $name;
     $itemObject->quantity = $quantity;
     $itemObject->imageUrl = $imageUrl;
 
