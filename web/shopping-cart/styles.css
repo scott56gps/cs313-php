@@ -7,7 +7,7 @@ body {
     padding-bottom: .1%;
 }
 
-#header-card h1 {
+#header-card > h1 {
     text-align: center;
 }
 
