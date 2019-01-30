@@ -34,8 +34,6 @@ $_SESSION["Address"] = $address;
                         <div class="item">
                             <span><strong>Quantity</strong></span>
                             <span><strong>' . $itemObject['quantity'] . '
-                            <br>
-                            <button id="' . $itemObject['id'] . '" onclick="removeItem(this.id);">Remove Item From Cart</button>
                         </div>
                     </div>
                 </div>';
