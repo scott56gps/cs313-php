@@ -24,7 +24,7 @@ function postItem(id, name, quantity, imageUrl) {
 
 function parseItem(id) {
     // Get the Quantity and Image URL for this id
-    var name = document.querySelector(`#${id}~h3`).innerHTML;
+    var name = document.getElementById(`${id}-name`).innerHTML;
     console.log(name);
     var quantityElement = document.getElementById(`${id}-quantity`);
     var imageElement = document.getElementById(`${id}-image`);

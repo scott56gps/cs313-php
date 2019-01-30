@@ -19,7 +19,7 @@ function generateOptions() {
         ?>
         <div class="main-content">
             <div class="card">
-                <h3>Ruffatti - Davies Concert Hall</h3>
+                <h3 id="ruffatti-name">Ruffatti - Davies Concert Hall</h3>
                 <div class="container">
                     <img id="ruffatti-image" src="https://pipeorgandatabase.org/photos/CA/SanFrancisco.DaviesSympho.FratelliRu.1020.222726.jpg" />
                     <div class="item">
