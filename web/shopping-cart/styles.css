@@ -49,6 +49,10 @@ h2 {
     margin: 1%;
 }
 
+#body-card {
+    background-color: #3dff68;
+}
+
 .card h3 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
