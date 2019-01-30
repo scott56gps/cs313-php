@@ -1,4 +1,5 @@
 <?php
+session_start();
 $activePage = basename($_SERVER['PHP_SELF'], ".php");
 ?>
 <div id="header-card" class="card">
@@ -24,7 +25,13 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
         </div>
         <div id="cart-header" class="item">
             <?php
-            echo "<span><h2>Items in Cart: 0</h2></span>";
+            $itemCount = 0;
+            foreach ($_SESSION as $key => $value) {
+                if ($key != "Address") {
+                    $itemCount = $itemCount + 1;
+                }
+            }
+            echo "<span><h2>Items in Cart: $itemCount</h2></span>";
             if ($activePage == 'browse') {
                 // Show the Cart Button
                 echo '<input id="cart-icon" type="image" src="https://freeiconshop.com/wp-content/uploads/edd/cart-outline.png" />';
