@@ -10,7 +10,9 @@
         include 'header.php';
         ?>
         <div class="main-content">
-            <h2>Coming Soon...</h2>
+            <div id="assignments-card" class="card">
+                <a href="../shopping-cart/browse.php">Prove 03 - Shopping Cart</a>
+            </div>
         </div>
     </body>
 </html>
