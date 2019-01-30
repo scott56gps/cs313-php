@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-function createItemObject($id, $quantity, $imageUrl) {
+function createItemObject($id, $name, $quantity, $imageUrl) {
     $itemObject->id = $id;
     $itemObject->quantity = $quantity;
     $itemObject->imageUrl = $imageUrl;
@@ -11,6 +11,7 @@ function createItemObject($id, $quantity, $imageUrl) {
 
 // Receive the id from the POST request
 $id = htmlspecialchars($_POST["id"]);
+$name = htmlspecialchars($_POST["name"]);
 $quantity = htmlspecialchars($_POST["quantity"]);
 $imageUrl = htmlspecialchars($_POST["imageUrl"]);
 
@@ -24,7 +25,7 @@ if (array_key_exists($id, $_SESSION)) {
     $_SESSION[$id] = json_encode($itemObject);
 } else {
     // Create an association in Session for this id
-    $itemObject = createItemObject($id, $quantity, $imageUrl);
+    $itemObject = createItemObject($id, $name, $quantity, $imageUrl);
     $_SESSION[$id] = json_encode($itemObject);
 }
 

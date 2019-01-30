@@ -10,7 +10,7 @@ function generateOptions() {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Scott's Organ Mercantile</title>
+        <title>Scott's Organ Mercantile - Browse Items</title>
         <link href="styles.css" rel="stylesheet" />
     </head>
     <body>

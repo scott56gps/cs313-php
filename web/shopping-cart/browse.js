@@ -2,7 +2,7 @@ function clearTextTimeout(element) {
     element.innerHTML = "";
 }
 
-function postItem(id, quantity, imageUrl) {
+function postItem(id, name, quantity, imageUrl) {
     // Create AJAX Request
     var request = new XMLHttpRequest();
 
@@ -19,16 +19,17 @@ function postItem(id, quantity, imageUrl) {
 
     request.open('POST', 'add.php', true);
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    request.send('id=' + id + '&quantity=' + quantity + '&imageUrl=' + imageUrl);
+    request.send('id=' + id + '&name=' + name + '&quantity=' + quantity + '&imageUrl=' + imageUrl);
 }
 
 function parseItem(id) {
     // Get the Quantity and Image URL for this id
-    console.log(id);
+    var name = document.querySelector(`#${id}~h3`).innerHTML;
+    console.log(name);
     var quantityElement = document.getElementById(`${id}-quantity`);
     var imageElement = document.getElementById(`${id}-image`);
 
-    postItem(id, quantityElement.value, imageElement.src);
+    postItem(id, name, quantityElement.value, imageElement.src);
 }
 
 document.getElementById('cart-icon').addEventListener('click', () => {
