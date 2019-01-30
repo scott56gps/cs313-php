@@ -13,7 +13,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                 break;
             case 'view-cart':
                 echo '<h2>View Cart</h2>';
-                echo '<button id="back-to-browse-button" click="window.open("browse.php", "_self");">Back to Browse</button>';
+                echo '<button id="back-to-browse-button" onclick="window.open("browse.php", "_self");">Back to Browse</button>';
                 break;
             case 'checkout':
                 echo '<h2>Checkout</h2>';
