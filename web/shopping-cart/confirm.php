@@ -19,6 +19,8 @@ $_SESSION["Address"] = $address;
         ?>
         <div class="main-content">
         <?php
+            echo '<div class="card"
+            <h3>Shipping to ' . $address;
             // Loop through the items in $_SESSION
             foreach ($_SESSION as $key => $value) {
                 if ($key != "Address") {
