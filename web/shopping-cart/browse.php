@@ -18,7 +18,7 @@ function generateOptions() {
         include 'header.php';
         ?>
         <div class="main-content">
-            <div id="body-card" class="card">
+            <div class="card">
                 <h3>Ruffatti - Davies Concert Hall</h3>
                 <div class="container">
                     <img id="ruffatti-image" src="https://pipeorgandatabase.org/photos/CA/SanFrancisco.DaviesSympho.FratelliRu.1020.222726.jpg" />
