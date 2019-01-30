@@ -55,9 +55,9 @@ function generateOptions() {
                 </div>
             </div>
             <div class="card">
-            <h3>Ruffatti - Davies Concert Hall</h3>
+            <h3>Glatter-Gotz - Claremont United Church of Christ Congregational</h3>
                 <div class="container">
-                    <img id="ruffatti-image" src="https://pipeorgandatabase.org/photos/CA/SanFrancisco.DaviesSympho.FratelliRu.1020.222726.jpg" />
+                    <img id="glatter-image" src="http://pipedreams.publicradio.org/gallery/us_west/california/images/claremont_ucc_glatter-gotz-rosales_lg.jpg" />
                     <div class="item">
                         <span><strong>Quantity</strong></span>
                         <select id="ruffatti-quantity">
@@ -66,9 +66,9 @@ function generateOptions() {
                         ?>
                         </select>
                         <br>
-                        <button id="ruffatti" onclick="parseItem(this.id);">Add To Cart</button>
+                        <button id="glatter" onclick="parseItem(this.id);">Add To Cart</button>
                         <br>
-                        <span id="ruffatti-feedback"></span>
+                        <span id="glatter-feedback"></span>
                     </div>
                 </div>
             </div>
