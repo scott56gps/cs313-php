@@ -26,6 +26,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                 break;
             case 'confirm':
                 echo '<h2>Confirmation</h2>';
+                echo '<button id="back-to-browse-button">Back to Browse</button>';
                 break;
         }
         ?>
