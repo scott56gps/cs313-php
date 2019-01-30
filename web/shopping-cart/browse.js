@@ -11,7 +11,8 @@ function postItem(id, quantity, imageUrl) {
     // Receive returned data and report success to the user
     request.onreadystatechange = () => {
         if (request.readyState == 4 && request.status == 200) {
-            console.log(request.responseURL);
+            var url = new URL(request.responseURL);
+            document.querySelector('#cart-header > span > h2').innerHTML = 'Items in Cart: ' + url.searchParams.get('count');
             var feedbackElement = document.getElementById(`${id}-feedback`);
             feedbackElement.innerHTML = 'Added to Cart';
             setTimeout(clearTextTimeout, 5000, feedbackElement);

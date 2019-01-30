@@ -39,7 +39,7 @@ function generateOptions() {
             <div class="card">
             <h3>Rieger - Christ Church, Oxford, England</h3>
                 <div class="container">
-                    <img id="rieger-image" src="http://pipedreams.publicradio.org/gallery/united_kingdom/images/oxford_christ-church_rieger_lg.jpg" />
+                    <img id="rieger-image" src="https://pipedreams.publicradio.org/gallery/united_kingdom/images/oxford_christ-church_rieger_lg.jpg" />
                     <div class="item">
                         <span><strong>Quantity</strong></span>
                         <select id="rieger-quantity">
