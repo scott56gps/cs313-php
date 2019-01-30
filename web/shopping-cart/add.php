@@ -38,7 +38,7 @@ if (array_key_exists($id, $_SESSION)) {
 
 $itemCount = 0;
 foreach ($_SESSION as $key => $value) {
-    if ($key != "Address") {
+    if ($key != 'Address') {
         $itemCount = $itemCount + 1;
     }
 }

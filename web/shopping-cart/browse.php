@@ -57,7 +57,7 @@ function generateOptions() {
             <div class="card">
             <h3 id="glatter-name">Glatter-Gotz - Claremont United Church of Christ Congregational</h3>
                 <div class="container">
-                    <img id="glatter-image" src="http://pipedreams.publicradio.org/gallery/us_west/california/images/claremont_ucc_glatter-gotz-rosales_lg.jpg" />
+                    <img id="glatter-image" src="https://pipedreams.publicradio.org/gallery/us_west/california/images/claremont_ucc_glatter-gotz-rosales_lg.jpg" />
                     <div class="item">
                         <span><strong>Quantity</strong></span>
                         <select id="glatter-quantity">
