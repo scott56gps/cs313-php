@@ -32,21 +32,21 @@ function createItemObject($id, $name, $quantity, $imageUrl) {
                 if ($key != "Address") {
                     // Generate a new object
                     $itemObject = json_decode($_SESSION[$key], TRUE);
-                    echo '<h1>' . $itemObject["name"] . '</h1>';
+                    echo '<h1>' . $itemObject['id'] . '</h1>';
 
                     echo '<div class="card">
-                    <h3 id="' . $itemObject->id . '-name">' . $itemObject->name . '</h3>
+                    <h3 id="' . $itemObject['id'] . '-name">' . $itemObject['name'] . '</h3>
                     <div class="container">
-                        <img id="' . $itemObject->id . '-image" src="' . $itemObject->imageUrl . '" />
+                        <img id="' . $itemObject['id'] . '-image" src="' . $itemObject['imageUrl'] . '" />
                         <div class="item">
                             <span><strong>Quantity</strong></span>
-                            <span><strong>' . $itemObject->quantity . '
-                            <select id="' . $itemObject->id . '-quantity">
-                                ' . generateOptions($itemObject->quantity) . '
+                            <span><strong>' . $itemObject['quantity'] . '
+                            <select id="' . $itemObject['id'] . '-quantity">
+                                ' . generateOptions($itemObject['quantity']) . '
                             </select>
                             <br>
-                            <button id="' . $itemObject->id . '-remove" onclick="parseItem(this.id);">Remove Item From Cart</button>
-                            <span id="' . $itemObject->id . '-feedback"></span>
+                            <button id="' . $itemObject['id'] . '-remove" onclick="parseItem(this.id);">Remove Item From Cart</button>
+                            <span id="' . $itemObject['id'] . '-feedback"></span>
                         </div>
                     </div>
                 </div>';
