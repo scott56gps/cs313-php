@@ -39,6 +39,8 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             } elseif ($activePage == 'view-cart') {
                 if ($itemCount > 0) {
                     echo '<button id="go-to-checkout-button">Proceed To Checkout!</button>';
+                } else {
+                    echo '';
                 }
             }
             ?>
