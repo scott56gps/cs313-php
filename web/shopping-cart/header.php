@@ -32,16 +32,12 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                     $itemCount = $itemCount + 1;
                 }
             }
-            echo "<span><h2>Items in Cart: $itemCount</h2></span>";
+            echo '<span><h2 id="itemCount">Items in Cart: ' . $itemCount . '</h2></span>';
             if ($activePage == 'browse') {
                 // Show the Cart Button
                 echo '<input id="cart-icon" type="image" src="https://freeiconshop.com/wp-content/uploads/edd/cart-outline.png" />';
-            } elseif ($activePage == 'view-cart') {
-                if ($itemCount > 0) {
-                    echo '<button id="go-to-checkout-button">Proceed To Checkout!</button>';
-                } else {
-                    echo '';
-                }
+            } elseif ($activePage == 'view-cart' && $itemCount > 0) {
+                echo '<button id="go-to-checkout-button">Proceed To Checkout!</button>';
             }
             ?>
         </div>
