@@ -43,9 +43,6 @@ function createItemObject($id, $name, $quantity, $imageUrl) {
                         <div class="item">
                             <span><strong>Quantity</strong></span>
                             <span><strong>' . $itemObject['quantity'] . '
-                            <select id="' . $itemObject['id'] . '-quantity">
-                                ' . generateOptions($itemObject['quantity']) . '
-                            </select>
                             <br>
                             <button id="' . $itemObject['id'] . '-remove" onclick="parseItem(this.id);">Remove Item From Cart</button>
                             <span id="' . $itemObject['id'] . '-feedback"></span>
