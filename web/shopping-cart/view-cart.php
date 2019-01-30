@@ -2,9 +2,12 @@
 session_start();
 
 function generateOptions($quantity) {
+    $optionString = '';
     for ($i = 1; $i < $quantity + 1; $i++) {
-        echo '<option value="' . $i . '">' . $i . '</option>';
+        $optionString . '<option value="' . $i . '">' . $i . '</option>';
     }
+
+    return $optionString;
 }
 
 function createItemObject($id, $name, $quantity, $imageUrl) {
