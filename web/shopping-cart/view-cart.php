@@ -1,10 +1,18 @@
 <?php
 session_start();
 
-function generateOptions() {
-    for ($i = 1; $i < 11; $i++) {
+function generateOptions($quantity) {
+    for ($i = 1; $i < $quantity + 1; $i++) {
         echo '<option value="' . $i . '">' . $i . '</option>';
     }
+}
+
+function createItemObject($id, $name, $quantity, $imageUrl) {
+    $itemObject->id = $id;
+    $itemObject->quantity = $quantity;
+    $itemObject->imageUrl = $imageUrl;
+
+    return $itemObject;
 }
 ?>
 <!DOCTYPE html>
@@ -18,7 +26,32 @@ function generateOptions() {
         include 'header.php';
         ?>
         <div class="main-content">
-            
+            <?php
+            // Loop through the items in $_SESSION
+            foreach ($_SESSION as $key => $value) {
+                if ($key != "Address") {
+                    // Generate a new object
+                    $itemObject = json_decode($_SESSION[$key], TRUE);
+
+                    echo '<div class="card">
+                    <h3 id="' . $itemObject->id . '-name">' . $itemObject->name . '</h3>
+                    <div class="container">
+                        <img id="' . $itemObject->id . '-image" src="' . $itemObject->imageUrl . '" />
+                        <div class="item">
+                            <span><strong>Quantity</strong></span>
+                            <span><strong>' . $itemObject->quantity . '
+                            <select id="' . $itemObject->id . '-quantity">
+                                ' . generateOptions($itemObject->quantity) . '
+                            </select>
+                            <br>
+                            <button id="' . $itemObject->id . '-remove" onclick="parseItem(this.id);">Remove Item From Cart</button>
+                            <span id="' . $itemObject->id . '-feedback"></span>
+                        </div>
+                    </div>
+                </div>';
+                }
+            }
+            ?>
         </div>
     </body>
 </html>
