@@ -22,3 +22,7 @@ function removeItem(id) {
 document.getElementById('back-to-browse-button').addEventListener('click', () => {
     window.open('browse.php', '_self');
 });
+
+document.getElementById('go-to-checkout-button').addEventListener('click', () => {
+    window.open('checkout.php', '_self');
+});
