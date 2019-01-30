@@ -12,7 +12,7 @@ session_start();
         include 'header.php';
         ?>
         <div class="main-content">
-            <form id="addressForm" class="card" method="post" action="add.php">
+            <form id="addressForm" class="card" method="post" action="confirm.php">
                 <label for="addressInput">Please Enter Address:</label>
                 <textarea id="addressInput" rows="4" cols="50" name="Address" placeholder="Address"></textarea>
                 <label for="addressSubmit">Save and Continue</label>

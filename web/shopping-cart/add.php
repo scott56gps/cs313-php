@@ -20,6 +20,10 @@ $imageUrl = htmlspecialchars($_POST["imageUrl"]);
 if (array_key_exists("Address", $_POST)) {
     // Save the Address to the Session Variables
     $_SESSION["Address"] = htmlspecialchars($_POST["Address"]);
+
+    // Redirect to Confirmation Page
+    header("Location: confirm.php");
+    exit;
 }
 
 // IF the id is already found in the Session Variables

@@ -3,7 +3,13 @@ session_start();
 $activePage = basename($_SERVER['PHP_SELF'], ".php");
 ?>
 <div id="header-card" class="card">
-    <h1>Scott's Organ Mercantile</h1>
+    <?php
+    if ($activePage == 'confirm') {
+        echo '<h1>Congratulations!  Your Order is placed</h1>';
+    } else {
+        echo "<h1>Scott's Organ Mercantile</h1>";
+    }
+    ?>
     <div id="nav-card" class="card">
         <div id="page-name" class="item">
         <?php
@@ -28,11 +34,14 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             <?php
             $itemCount = 0;
             foreach ($_SESSION as $key => $value) {
-                if ($key != "Address") {
+                if ($key != 'Address') {
                     $itemCount = $itemCount + 1;
                 }
             }
-            echo '<span><h2 id="itemCount">Items in Cart: ' . $itemCount . '</h2></span>';
+
+            if ($activePage == 'browse' || $activePage == 'view-cart') {
+                echo '<span><h2 id="itemCount">Items in Cart: ' . $itemCount . '</h2></span>';
+            }
             if ($activePage == 'browse') {
                 // Show the Cart Button
                 echo '<input id="cart-icon" type="image" src="https://freeiconshop.com/wp-content/uploads/edd/cart-outline.png" />';
