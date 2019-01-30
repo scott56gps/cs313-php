@@ -10,11 +10,17 @@ function createItemObject($id, $name, $quantity, $imageUrl) {
     return $itemObject;
 }
 
-// Receive the id from the POST request
+// Receive the data from the POST request
 $id = htmlspecialchars($_POST["id"]);
 $name = htmlspecialchars($_POST["name"]);
 $quantity = htmlspecialchars($_POST["quantity"]);
 $imageUrl = htmlspecialchars($_POST["imageUrl"]);
+
+// If the Address was sent
+if (array_key_exists("Address", $_POST)) {
+    // Save the Address to the Session Variables
+    $_SESSION["Address"] = htmlspecialchars($_POST["Address"]);
+}
 
 // IF the id is already found in the Session Variables
 if (array_key_exists($id, $_SESSION)) {
