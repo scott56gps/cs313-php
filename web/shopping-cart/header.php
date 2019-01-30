@@ -36,8 +36,10 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             if ($activePage == 'browse') {
                 // Show the Cart Button
                 echo '<input id="cart-icon" type="image" src="https://freeiconshop.com/wp-content/uploads/edd/cart-outline.png" />';
-            } elseif ($activePage == 'view-cart' && $itemCount > 0) {
-                echo '<button id="go-to-checkout-button">Proceed To Checkout!</button>';
+            } elseif ($activePage == 'view-cart') {
+                if ($itemCount > 0) {
+                    echo '<button id="go-to-checkout-button">Proceed To Checkout!</button>';
+                }
             }
             ?>
         </div>
