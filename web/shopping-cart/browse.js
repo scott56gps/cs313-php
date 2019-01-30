@@ -32,5 +32,6 @@ function parseItem(id) {
 }
 
 document.getElementById('cart-icon').addEventListener('click') = () => {
+    console.log('I am in the listener');
     window.open('view-cart.php', '_self');
 }
