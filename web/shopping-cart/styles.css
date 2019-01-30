@@ -24,6 +24,10 @@ body {
     align-items: center;
 }
 
+#back-to-browse-button {
+    margin-left: 5%;
+}
+
 #cart-header {
     display: flex;
     align-items: center;

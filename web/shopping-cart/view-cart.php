@@ -21,5 +21,4 @@ function generateOptions() {
             
         </div>
     </body>
-    <script src="browse.js"></script>
 </html>
