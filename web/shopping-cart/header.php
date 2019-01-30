@@ -13,6 +13,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                 break;
             case 'view-cart':
                 echo '<h2>View Cart</h2>';
+                echo '<button id="back-to-browse-button">Back to Browse</button>';
                 break;
             case 'checkout':
                 echo '<h2>Checkout</h2>';
@@ -35,9 +36,6 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             if ($activePage == 'browse') {
                 // Show the Cart Button
                 echo '<input id="cart-icon" type="image" src="https://freeiconshop.com/wp-content/uploads/edd/cart-outline.png" />';
-            } elseif ($activePage == 'view-cart') {
-                // Show the Back to Browse button
-                echo '<button id="back-to-browse-button">Back to Browse</button>';
             }
             ?>
         </div>
