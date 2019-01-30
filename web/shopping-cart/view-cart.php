@@ -44,8 +44,7 @@ function createItemObject($id, $name, $quantity, $imageUrl) {
                             <span><strong>Quantity</strong></span>
                             <span><strong>' . $itemObject['quantity'] . '
                             <br>
-                            <button id="' . $itemObject['id'] . '-remove" onclick="parseItem(this.id);">Remove Item From Cart</button>
-                            <span id="' . $itemObject['id'] . '-feedback"></span>
+                            <button id="' . $itemObject['id'] . '-remove" onclick="removeItem(this.id);">Remove Item From Cart</button>
                         </div>
                     </div>
                 </div>';
@@ -54,4 +53,5 @@ function createItemObject($id, $name, $quantity, $imageUrl) {
             ?>
         </div>
     </body>
+    <script src="view-cart.js"></script>
 </html>
