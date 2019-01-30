@@ -21,11 +21,11 @@ if (array_key_exists($id, $_SESSION)) {
 
     $itemObject->quantity = $quantity;
 
-    $_SESSION["id"] = json_encode($itemObject);
+    $_SESSION[$id] = json_encode($itemObject);
 } else {
     // Create an association in Session for this id
     $itemObject = createItemObject($id, $quantity, $imageUrl);
-    $_SESSION["id"] = json_encode($itemObject);
+    $_SESSION[$id] = json_encode($itemObject);
 }
 
 $itemCount = 0;
