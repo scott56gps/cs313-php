@@ -48,7 +48,7 @@ foreach ($_SESSION as $key => $value) {
                         <select id="rieger-quantity">
                             <?php
                             for ($i = 1; $i < 11; $i++) {
-                                echo '<option value="$i">$i</option>';
+                                echo '<option value="' . $i . '">' . $i . '</option>';
                             }
                             ?>
                         </select>
