@@ -39,6 +39,9 @@ $_SESSION["Address"] = $address;
                 </div>';
                 }
             }
+
+            // Destroy the Session
+            session_destroy();
             ?>
         </div>
     </body>
