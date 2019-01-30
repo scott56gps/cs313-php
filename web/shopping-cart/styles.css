@@ -15,6 +15,22 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
+    display: flex;
+}
+
+#page-name {
+    padding: 0;
+}
+
+#cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2%;
+}
+
+#cart-icon {
+    width: 12%;
 }
 
 h2 {

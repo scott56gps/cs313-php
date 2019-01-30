@@ -1,13 +1,6 @@
 <?php
 session_start();
 
-$itemCount = 0;
-foreach ($_SESSION as $key => $value) {
-    if ($key != "Address") {
-        $itemCount = $itemCount + 1;
-    }
-}
-
 function generateOptions() {
     for ($i = 1; $i < 11; $i++) {
         echo '<option value="' . $i . '">' . $i . '</option>';
