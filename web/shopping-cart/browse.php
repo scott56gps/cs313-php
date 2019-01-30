@@ -37,7 +37,7 @@ function generateOptions() {
                 </div>
             </div>
             <div class="card">
-            <h3>Rieger - Christ Church, Oxford, England</h3>
+            <h3 id="rieger-name">Rieger - Christ Church, Oxford, England</h3>
                 <div class="container">
                     <img id="rieger-image" src="https://pipedreams.publicradio.org/gallery/united_kingdom/images/oxford_christ-church_rieger_lg.jpg" />
                     <div class="item">
@@ -55,7 +55,7 @@ function generateOptions() {
                 </div>
             </div>
             <div class="card">
-            <h3>Glatter-Gotz - Claremont United Church of Christ Congregational</h3>
+            <h3 id="glatter-name">Glatter-Gotz - Claremont United Church of Christ Congregational</h3>
                 <div class="container">
                     <img id="glatter-image" src="http://pipedreams.publicradio.org/gallery/us_west/california/images/claremont_ucc_glatter-gotz-rosales_lg.jpg" />
                     <div class="item">
