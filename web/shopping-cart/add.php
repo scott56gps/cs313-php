@@ -28,6 +28,13 @@ if (array_key_exists($id, $_SESSION)) {
     $_SESSION["id"] = json_encode($itemObject);
 }
 
-header('Location: browse.php');
+$itemCount = 0;
+foreach ($_SESSION as $key => $value) {
+    if ($key != "Address") {
+        $itemCount = $itemCount + 1;
+    }
+}
+
+header("Location: browse.php?count=$itemCount");
 exit;
 ?>

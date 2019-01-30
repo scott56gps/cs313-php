@@ -1,12 +1,5 @@
 <?php
 $activePage = basename($_SERVER['PHP_SELF'], ".php");
-
-$itemCount = 0;
-foreach ($_SESSION as $key => $value) {
-    if ($key != "Address") {
-        $itemCount = $itemCount + 1;
-    }
-}
 ?>
 <div id="header-card" class="card">
     <h1>Scott's Organ Mercantile</h1>
