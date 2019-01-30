@@ -11,7 +11,6 @@ function removeItem(id) {
         if (request.readyState == 4 && request.status == 200) {
             var url = new URL(request.responseURL);
             document.querySelector('#cart-header > span > h2').innerHTML = 'Items in Cart: ' + url.searchParams.get('count');
-            setTimeout(clearTextTimeout, 5000, feedbackElement);
 
             // Delete the parent associated with this id
             document.querySelector(`#${id}-name`).parentElement.remove();
