@@ -60,7 +60,7 @@ function generateOptions() {
                     <img id="glatter-image" src="http://pipedreams.publicradio.org/gallery/us_west/california/images/claremont_ucc_glatter-gotz-rosales_lg.jpg" />
                     <div class="item">
                         <span><strong>Quantity</strong></span>
-                        <select id="ruffatti-quantity">
+                        <select id="glatter-quantity">
                         <?php
                         generateOptions();
                         ?>
