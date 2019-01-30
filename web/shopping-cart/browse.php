@@ -8,6 +8,12 @@ foreach ($_SESSION as $key => $value) {
     }
 }
 
+function generateOptions() {
+    for ($i = 1; $i < 11; $i++) {
+        echo '<option value="' . $i . '">' . $i . '</option>';
+    }
+}
+
 // echo $itemCount;
 ?>
 <!DOCTYPE html>
@@ -28,9 +34,9 @@ foreach ($_SESSION as $key => $value) {
                     <div class="item">
                         <span><strong>Quantity</strong></span>
                         <select id="ruffatti-quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                            <?php
+                            generateOptions();
+                            ?>
                         </select>
                         <br>
                         <button id="ruffatti" onclick="parseItem(this.id);">Add To Cart</button>
@@ -47,9 +53,7 @@ foreach ($_SESSION as $key => $value) {
                         <span><strong>Quantity</strong></span>
                         <select id="rieger-quantity">
                             <?php
-                            for ($i = 1; $i < 11; $i++) {
-                                echo '<option value="' . $i . '">' . $i . '</option>';
-                            }
+                            generateOptions();
                             ?>
                         </select>
                         <br>
@@ -66,9 +70,9 @@ foreach ($_SESSION as $key => $value) {
                     <div class="item">
                         <span><strong>Quantity</strong></span>
                         <select id="ruffatti-quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                        <?php
+                        generateOptions();
+                        ?>
                         </select>
                         <br>
                         <button id="ruffatti" onclick="parseItem(this.id);">Add To Cart</button>
