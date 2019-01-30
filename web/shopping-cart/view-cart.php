@@ -44,7 +44,7 @@ function createItemObject($id, $name, $quantity, $imageUrl) {
                             <span><strong>Quantity</strong></span>
                             <span><strong>' . $itemObject['quantity'] . '
                             <br>
-                            <button id="' . $itemObject['id'] . '-remove" onclick="removeItem(this.id);">Remove Item From Cart</button>
+                            <button id="' . $itemObject['id'] . '" onclick="removeItem(this.id);">Remove Item From Cart</button>
                         </div>
                     </div>
                 </div>';

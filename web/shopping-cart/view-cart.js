@@ -1,8 +1,5 @@
-function clearTextTimeout(element) {
-    element.innerHTML = "";
-}
-
 function removeItem(id) {
+    console.log(id);
     // Create AJAX Request
     var request = new XMLHttpRequest();
 
@@ -13,7 +10,7 @@ function removeItem(id) {
             document.querySelector('#cart-header > span > h2').innerHTML = 'Items in Cart: ' + url.searchParams.get('count');
 
             // Delete the parent associated with this id
-            document.querySelector(`#${id}-name`).parentElement.remove();
+            document.getElementById(`${id}-name`).parentElement.remove();
         }
     }
 
