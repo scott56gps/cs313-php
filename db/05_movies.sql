@@ -13,3 +13,14 @@ CREATE TABLE movie (
     name VARCHAR(50) NOT NULL,
     year SMALLINT
 );
+
+INSERT INTO movie (name, year) VALUES (
+    'The Wizard of Oz',
+    1939
+), (
+    'Operation Condor',
+    1993
+), (
+    'Rush Hour',
+    2001
+);
