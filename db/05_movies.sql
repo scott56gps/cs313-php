@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS actor, movie CASCADE;
+DROP TABLE IF EXISTS actor, movie, movie_actor CASCADE;
 
 CREATE TABLE actor (
     id SERIAL PRIMARY KEY,
@@ -27,8 +27,33 @@ INSERT INTO movie (name, year) VALUES (
     2001
 );
 
+INSERT INTO actor (name) VALUES (
+    'Jackie Chan'
+), (
+    'Chris Rock'
+), (
+    'Judy Garland'
+);
+
 CREATE TABLE movie_actor (
     id SERIAL PRIMARY KEY,
     actor_id INT NOT NULL REFERENCES actor(id),
     movie_id INT NOT NULL REFERENCES movie(id)
+);
+
+INSERT INTO movie_actor (movie_id, actor_id) VALUES (
+    1,
+    1
+), (
+    1,
+    2
+), (
+    1,
+    3
+), (
+    2,
+    3
+), (
+    3,
+    1
 );
