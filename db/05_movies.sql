@@ -41,7 +41,7 @@ CREATE TABLE movie_actor (
     movie_id INT NOT NULL REFERENCES movie(id)
 );
 
-INSERT INTO movie_actor (movie_id, actor_id) VALUES (
+INSERT INTO movie_actor (actor_id, movie_id) VALUES (
     1,
     1
 ), (
