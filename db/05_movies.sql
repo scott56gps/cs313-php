@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS actor, movie CASCADE;
+
 CREATE TABLE actor (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL
@@ -23,4 +25,10 @@ INSERT INTO movie (name, year) VALUES (
 ), (
     'Rush Hour',
     2001
+);
+
+CREATE TABLE movie_actor (
+    id SERIAL PRIMARY KEY,
+    actor_id INT NOT NULL REFERENCES actor(id),
+    movie_id INT NOT NULL REFERENCES movie(id)
 );
