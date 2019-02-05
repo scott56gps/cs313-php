@@ -61,4 +61,4 @@ INSERT INTO movie_actor (movie_id, actor_id) VALUES (
 SELECT * FROM movie m
     JOIN movie_actor ma ON m.id = ma.movie_id
     JOIN actor a ON ma.actor_id = a.id
-    WHERE m.title = 'Rush Hour';
+    WHERE m.name = 'Rush Hour';
