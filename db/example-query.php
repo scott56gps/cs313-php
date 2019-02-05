@@ -27,7 +27,7 @@ try
 
   // The secure way
   $id = 1;
-  $statement = $db->prepare('SELECT student_first_name FROM student WHERE id=:id');
+  $statement = $db->prepare('SELECT student_first_name FROM student WHERE student_id=:id');
   $statement->bindValue(':id', $id, PDO::PARAM_INT);
   $statement->execute();
   $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
