@@ -1,7 +1,7 @@
-<h1>Scripture Resources</h1>
 <?php
-try
-{
+$book = $_POST["book"];
+
+try {
   $dbUrl = getenv('DATABASE_URL');
 
   $dbOpts = parse_url($dbUrl);
@@ -18,18 +18,18 @@ try
 
   // The secure way
   $id = 1;
-  $statement = $db->prepare('SELECT b.name as book, s.chapter, s.verse, s.content FROM scripture s JOIN book b ON b.id = s.book_id;');
-//   $statement->bindValue(':id', $id, PDO::PARAM_INT);
+  $statement = $db->prepare('SELECT b.name as book, s.chapter, s.verse, s.content FROM scripture s JOIN book b ON b.id = s.book_id WHERE b.name = :book;');
+  $statement->bindValue(':book', $book, PDO::PARAM_INT);
   $statement->execute();
   $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-  foreach ($rows as $row) {
-    echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"<br/>';
-  }
-}
-catch (PDOException $ex)
-{
+} catch (PDOException $ex) {
   echo 'Error!: ' . $ex->getMessage();
   die();
+}
+?>
+<h1>Scripture Resources</h1>
+<?php
+foreach ($rows as $row) {
+  echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"<br/>';
 }
 ?>
