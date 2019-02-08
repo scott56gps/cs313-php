@@ -24,7 +24,7 @@ try
   $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
   foreach ($rows as $row) {
-    echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '<br/>';
+    echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"<br/>';
   }
 }
 catch (PDOException $ex)
