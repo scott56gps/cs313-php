@@ -1,5 +1,5 @@
 <form action="scriptures.php" method="post">
-    <input type="text" name="book" />
-    <label for="bookSubmit">Book:</label>
-    <input type="submit" id="bookSubmit" value="Submit" />
+    <label for="bookInput">Book:</label>
+    <input type="text" id="bookInput" name="book" />
+    <input type="submit" value="Submit" />
 </form>
