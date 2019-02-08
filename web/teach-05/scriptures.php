@@ -26,7 +26,7 @@ try {
 
   // The secure way
   $id = 1;
-  $statement = $db->prepare();
+  $statement = $db->prepare($query);
   $statement->bindValue(':book', $book, PDO::PARAM_INT);
   $statement->execute();
   $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
