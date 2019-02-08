@@ -3,7 +3,8 @@ $book = $_POST["book"];
 
 // Generate appropriate query
 $query = '';
-if (empty($book)) {
+$bookIsEmpty = empty($book);
+if ($bookIsEmpty) {
   $query = 'SELECT b.name as book, s.chapter, s.verse, s.content FROM scripture s JOIN book b ON b.id = s.book_id;';
 } else {
   $query = 'SELECT b.name as book, s.chapter, s.verse, s.content FROM scripture s JOIN book b ON b.id = s.book_id WHERE b.name = :book;';
@@ -27,7 +28,9 @@ try {
   // The secure way
   $id = 1;
   $statement = $db->prepare($query);
-  $statement->bindValue(':book', $book, PDO::PARAM_INT);
+  if (!$bookIsEmpty) {
+    $statement->bindValue(':book', $book, PDO::PARAM_INT);
+  }
   $statement->execute();
   $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $ex) {
