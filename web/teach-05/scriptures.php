@@ -1,3 +1,4 @@
+<h1>Scripture Resources</h1>
 <?php
 try
 {
@@ -23,7 +24,7 @@ try
   $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
   foreach ($rows as $row) {
-    echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . ' - "' . $row['content'] . '<br/>';
+    echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '<br/>';
   }
 }
 catch (PDOException $ex)
