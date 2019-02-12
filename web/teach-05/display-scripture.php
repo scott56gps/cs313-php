@@ -19,10 +19,10 @@ foreach ($rows as $row) {
   $selectTopicsForScriptureStatement = $db->prepare($selectTopicsForScriptureQuery);
   $selectTopicsForScriptureStatement->bindParam(':scriptureId', $row['id'], PDO::PARAM_INT);
   $selectTopicsForScriptureStatement->execute();
-  $rows = $selectTopicsForScriptureStatement->fetchAll(PDO::FETCH_ASSOC);
+  $topics = $selectTopicsForScriptureStatement->fetchAll(PDO::FETCH_ASSOC);
 
-  foreach($rows as $row) {
-    echo ' ' . $row['name'] . ' ';
+  foreach($topics as $topic) {
+    echo ' ' . $topic['name'] . ' ';
   }
 
   echo  '</strong>- "' . $row['content'] . '"<br/>';
