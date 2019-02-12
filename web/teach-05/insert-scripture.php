@@ -6,7 +6,7 @@ $book = $_POST['book'];
 $chapter = $_POST['chapter'];
 $verse = $_POST['verse'];
 $content = $_POST['content'];
-$topics = $_POST['topics']
+$topics = $_POST['topics'];
 
 $selectBookIdStatement = $db->prepare('SELECT id FROM book WHERE name = :book');
 $selectBookIdStatement->bindParam(':book', $book, PDO::PARAM_STR);
