@@ -3,7 +3,7 @@
 include 'db.php';
 $db = getDb();
 
-$selectScriptureWithTopicQuery = 'SELECT s.id, b.name as book, s.chapter, s.verse, t.name as topic_name, s.content FROM scripture s JOIN book b ON b.id = s.book_id JOIN scripture_topic st ON st.scripture_id = s.id JOIN topic t ON t.id = st.topic_id';
+$selectScriptureWithTopicQuery = 'SELECT s.id, b.name as book, s.chapter, s.verse, s.content FROM scripture s JOIN book b ON b.id = s.book_id';
 
 $selectScriptureStatement = $db->prepare($selectScriptureWithTopicQuery);
 $selectScriptureStatement->execute();
