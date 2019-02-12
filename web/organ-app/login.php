@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Organ Practice App - Login</title>
+        <title>Organ Practice App - Log In</title>
         <link href="styles.css" rel="stylesheet" />
     </head>
 
@@ -10,13 +10,14 @@
         include 'sidebar.php';
         ?>
         <div class="main-content">
-            <h2>Login</h2>
+            <h2>Log In</h2>
             <div class="card">
                 <form action="/session.php" method="get">
                     <label for="username">Username</label>
                     <input id="username" type="text" name="username" />
                     <label for="password">Password</label>
                     <input id="password" type="text" name="password" />
+                    <input type="submit" value="Log In" />
                 </form>   
             </div>
         </div>

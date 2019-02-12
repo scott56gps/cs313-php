@@ -25,4 +25,14 @@
 .main-content {
     margin-left: 160px; /* Same as the width of the sidebar */
     padding: 0px 10px;
-  }
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 16px 16px;
+    background-color: rgb(18, 236, 84);
+    border-radius: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
