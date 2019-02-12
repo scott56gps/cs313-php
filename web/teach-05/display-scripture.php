@@ -6,7 +6,6 @@ $db = getDb();
 $selectScriptureWithTopicQuery = 'SELECT b.name as book, s.chapter, s.verse, t.name as topic_name, s.content FROM scripture s JOIN book b ON b.id = s.book_id JOIN scripture_topic st ON st.scripture_id = s.id JOIN topic t ON t.id = st.topic_id';
 
 $selectScriptureStatement = $db->prepare($selectScriptureWithTopicQuery);
-$selectScriptureStatement->bindParam(':book', $book, PDO::PARAM_STR);
 $selectScriptureStatement->execute();
 $rows = $selectScriptureStatement->fetchAll(PDO::FETCH_ASSOC);
 
