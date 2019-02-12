@@ -17,7 +17,7 @@ CREATE TABLE scripture (
     book_id INTEGER REFERENCES book(id) NOT NULL,
     chapter VARCHAR(3) NOT NULL,
     verse VARCHAR(3) NOT NULL,
-    content VARCHAR(500) NOT NULL
+    content VARCHAR(1000) NOT NULL
 );
 
 INSERT INTO scripture
