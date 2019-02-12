@@ -41,5 +41,5 @@ foreach($topics as $topicId) {
 }
 
 // Redirect to display page
-header("Location: scriptures.php");
+header("Location: display-scripture.php");
 ?>
