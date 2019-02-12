@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +15,7 @@
         <div class="main-content">
             <h2>Log In</h2>
             <div class="card">
-                <form action="/session.php" method="get">
+                <form action="session.php" method="post">
                     <label for="username">Username</label>
                     <input id="username" type="text" name="username" />
                     <label for="password">Password</label>
