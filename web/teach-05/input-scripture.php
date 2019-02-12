@@ -3,7 +3,6 @@ include 'db.php';
 $db = getDb();
 
 // The secure way
-$id = 1;
 $statement = $db->prepare('SELECT id, name FROM topic');
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
