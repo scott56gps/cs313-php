@@ -5,7 +5,7 @@ $db = getDb();
 
 
 
-foreach ($rows as $row) {
-  echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"<br/>';
-}
+// foreach ($rows as $row) {
+//   echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"<br/>';
+// }
 ?>
