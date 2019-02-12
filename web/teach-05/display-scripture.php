@@ -1,4 +1,5 @@
 <h1>Scripture Resources</h1>
+<h2>Reference | Topics | Scripture</h2>
 <?php
 include 'db.php';
 $db = getDb();
