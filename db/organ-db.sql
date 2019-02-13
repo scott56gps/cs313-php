@@ -14,7 +14,7 @@ CREATE TABLE student(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR (50) NOT NULL,
     last_name VARCHAR (50) NOT NULL,
-    teacher_id INTEGER REFERENCES teacher(teacher_id) ON DELETE RESTRICT,
+    teacher_id INTEGER REFERENCES teacher(id) ON DELETE RESTRICT,
     username VARCHAR (20) UNIQUE NOT NULL,
     password VARCHAR (20) NOT NULL
 );
@@ -32,7 +32,7 @@ CREATE TABLE student_piece (
 
 CREATE TABLE practice_event(
     id SERIAL,
-    piece_id INTEGER REFERENCES piece(piece_id),
+    piece_id INTEGER REFERENCES piece(id),
     duration INTERVAL,
     date DATE,
     CONSTRAINT practice_event_pk PRIMARY KEY (id, piece_id)
