@@ -38,3 +38,11 @@ CREATE TABLE practice_event(
     date DATE,
     CONSTRAINT practice_event_pk PRIMARY KEY (id, piece_id)
 );
+
+INSERT INTO student (first_name, last_name, teacher_id, username, password) VALUES (
+    'Scott',
+    'Nicholes',
+    1,
+    'scottie',
+    'organist'
+);
