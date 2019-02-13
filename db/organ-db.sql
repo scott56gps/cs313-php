@@ -52,3 +52,17 @@ INSERT INTO student (first_name, last_name, teacher_id, username, password) VALU
     'scottie',
     'organist'
 );
+
+INSERT INTO piece (name) VALUES (
+    'Mit Freuden Zart'
+), (
+    'For The Bread Which Thou Hast Broken'
+);
+
+INSERT INTO student_piece (student_id, piece_id) VALUES (
+    1,
+    1
+), (
+    1,
+    2
+);
