@@ -12,9 +12,9 @@ if (isset($_SESSION['username'])) {
 <div class="sidebar">
     <?php
     if ($isLoggedIn) {
-        echo '<a href="pieces.php" class="' . ($activePage == 'pieces') ? 'activeNav':'' . '">My Pieces</a>';
+        echo '<a href="pieces.php" class="' . (($activePage == 'pieces') ? 'activeNav':'') . '">My Pieces</a>';
     }
 
-    echo '<a href="login.php" class="' . ($activePage == 'login') ? 'activeNav':'' . '">Login</a>';
+    echo '<a href="login.php" class="' . (($activePage == 'login') ? 'activeNav':'') . '">Login</a>';
     ?>
 </div>
