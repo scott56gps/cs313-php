@@ -3,8 +3,8 @@
 session_start();
 
 // Receive the data from the POST request
-$id = htmlspecialchars($_POST["username"]);
-$name = htmlspecialchars($_POST["password"]);
+$username = htmlspecialchars($_POST["username"]);
+$password = htmlspecialchars($_POST["password"]);
 
 if (isset($_POST["username"])) {
     // Check the Database to see if the username exists
@@ -14,19 +14,18 @@ if (isset($_POST["username"])) {
     $statement = $db->prepare('SELECT username FROM student WHERE username=:username');
     $statement->bindValue(':username', $username, PDO::PARAM_INT);
     $statement->execute();
-    $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $row = $statement->fetch(PDO::FETCH_ASSOC);
 
-    if (count($rows) == 0) {
+    if (empty($row) == 0) {
         // Username is not in the database
+        // Prevent user from logging in
+        header("Location: login.php");
     } else {
         // Username exists
-    }
+        // Log the user in by adding a session variable
+        $_SESSION['username'] = $username;
 
-    foreach ($rows as $row) {
-        
+        header("Location: pieces.php");
     }
-
-    // $_SESSION["username"] = $_POST["username"];
-    // header("Location: login.php");
 }
 ?>
