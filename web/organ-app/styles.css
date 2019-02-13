@@ -22,6 +22,10 @@
     color: #f1f1f1;
 }
 
+.sidebar .active-nav a {
+    color: #f1f1f1;
+}
+
 .main-content {
     margin-left: 160px; /* Same as the width of the sidebar */
     padding: 0px 10px;
