@@ -7,7 +7,7 @@ $studentFirstName = $_SESSION['student_first_name'];
 <html>
     <head>
         <?php
-        echo "<title>$studentFirstName's Pieces";
+        echo "<title>$studentFirstName's Pieces</title>";
         ?>
         <link href="styles.css" rel="stylesheet" />
     </head>
