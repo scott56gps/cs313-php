@@ -16,7 +16,7 @@ if (isset($_POST["username"])) {
     $statement->execute();
     $row = $statement->fetch(PDO::FETCH_ASSOC);
 
-    if (empty($row) == 0) {
+    if (empty($row)) {
         // Username is not in the database
         // Prevent user from logging in
         header("Location: login.php");
