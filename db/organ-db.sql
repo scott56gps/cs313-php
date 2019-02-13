@@ -39,6 +39,12 @@ CREATE TABLE practice_event(
     CONSTRAINT practice_event_pk PRIMARY KEY (id, piece_id)
 );
 
+INSERT INTO teacher (first_name, last_name, email) VALUES (
+    'Daniel',
+    'Kerr',
+    'dkerr@byui.edu'
+);
+
 INSERT INTO student (first_name, last_name, teacher_id, username, password) VALUES (
     'Scott',
     'Nicholes',
