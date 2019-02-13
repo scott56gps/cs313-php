@@ -1,7 +1,8 @@
-DROP TABLE IF EXISTS practice_event;
 DROP TABLE IF EXISTS piece;
-DROP TABLE IF EXISTS student;
+DROP TABLE IF EXISTS practice_event;
 DROP TABLE IF EXISTS teacher;
+DROP TABLE IF EXISTS student;
+DROP TABLE IF EXISTS student_piece;
 
 CREATE TABLE teacher(
     id SERIAL PRIMARY KEY,
