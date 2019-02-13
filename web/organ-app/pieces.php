@@ -7,7 +7,7 @@ $studentFirstName = $_SESSION['student_first_name'];
 <html>
     <head>
         <?php
-        echo "<title>$studentFirstName's Pieces"
+        echo "<title>$studentFirstName's Pieces";
         ?>
         <link href="styles.css" rel="stylesheet" />
     </head>
@@ -19,7 +19,7 @@ $studentFirstName = $_SESSION['student_first_name'];
         <div class="main-content">
             <h2>My Pieces</h2>
             <?php
-            
+
             ?>
         </div>
     </body>
