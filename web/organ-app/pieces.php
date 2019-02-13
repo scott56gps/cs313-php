@@ -29,7 +29,9 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
         <div class="main-content">
             <h2>My Pieces</h2>
             <?php
-
+            foreach($pieces as $piece) {
+                echo '<div class="card"><h2>' . $piece['name'] . '</h2></div>';
+            }
             ?>
         </div>
     </body>
