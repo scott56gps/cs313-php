@@ -1,7 +1,17 @@
 <?php
 session_start();
 
+include 'db.php';
+$db = getDb();
+
+$studentId = $_SESSION['student_id'];
 $studentFirstName = $_SESSION['student_first_name'];
+
+// Get the pieces for this user from the database
+$statement = $db->prepare('SELECT p.name FROM piece p JOIN student_piece sp ON p.id = sp.piece_id WHERE sp.student_id = :studentId');
+$statement->bindValue(':studentId', $studentId, PDO::PARAM_INT);
+$statement->execute();
+$pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>

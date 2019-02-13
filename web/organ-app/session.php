@@ -12,7 +12,7 @@ if (isset($_POST["username"])) {
     $db = getDb();
 
     $statement = $db->prepare('SELECT * FROM student WHERE username=:username');
-    $statement->bindValue(':username', $username, PDO::PARAM_INT);
+    $statement->bindValue(':username', $username, PDO::PARAM_STR);
     $statement->execute();
     $row = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -23,9 +23,9 @@ if (isset($_POST["username"])) {
     } else {
         // Username exists
         // Log the user in by adding a session variable
-        $_SESSION['student_id'] = $row['student_id'];
-        $_SESSION['student_first_name'] = $row['student_first_name'];
-        $_SESSION['student_last_name'] = $row['student_last_name'];
+        $_SESSION['student_id'] = $row['id'];
+        $_SESSION['student_first_name'] = $row['first_name'];
+        $_SESSION['student_last_name'] = $row['last_name'];
         $_SESSION['username'] = $username;
 
         header("Location: pieces.php");
