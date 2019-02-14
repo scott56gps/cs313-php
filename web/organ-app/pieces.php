@@ -4,6 +4,10 @@ session_start();
 include 'db.php';
 $db = getDb();
 
+if (!isset($_SESSION['username'])) {
+    header ("Location: login.php");
+}
+
 $studentId = $_SESSION['student_id'];
 $studentFirstName = $_SESSION['student_first_name'];
 
