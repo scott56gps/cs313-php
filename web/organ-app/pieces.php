@@ -12,7 +12,7 @@ $studentId = $_SESSION['student_id'];
 $studentFirstName = $_SESSION['student_first_name'];
 
 // Get the pieces for this user from the database
-$statement = $db->prepare('SELECT p.name FROM piece p JOIN student_piece sp ON p.id = sp.piece_id WHERE sp.student_id = :studentId');
+$statement = $db->prepare('SELECT p.id, p.name FROM piece p JOIN student_piece sp ON p.id = sp.piece_id WHERE sp.student_id = :studentId');
 $statement->bindValue(':studentId', $studentId, PDO::PARAM_INT);
 $statement->execute();
 $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -36,7 +36,7 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
             foreach($pieces as $piece) {
                 $name = $piece['name'];
                 $pieceId = $piece['id'];
-                echo "<div class='card'><h2><a href='piece-detail.php?piece_id=$pieceId'>$name</a></h2></div>";
+                echo "<div class='card'><h2><a href='piece-detail.php?piece_id=$pieceId'&piece_name=$name>$name</a></h2></div>";
             }
             ?>
         </div>
