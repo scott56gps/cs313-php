@@ -35,7 +35,7 @@ CREATE TABLE practice_event(
     id SERIAL,
     piece_id INTEGER REFERENCES piece(id),
     duration INTERVAL,
-    date DATE,
+    practice_date DATE,
     CONSTRAINT practice_event_pk PRIMARY KEY (id, piece_id)
 );
 
@@ -65,4 +65,14 @@ INSERT INTO student_piece (student_id, piece_id) VALUES (
 ), (
     1,
     2
+);
+
+INSERT INTO practice_event (piece_id, duration, practice_date) VALUES (
+    1,
+    '5 Hours',
+    '2019-01-28'
+), (
+    2,
+    '3 Hours 4 Minutes',
+    '2019-01-15'
 );
