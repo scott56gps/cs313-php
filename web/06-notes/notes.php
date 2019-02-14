@@ -4,11 +4,11 @@ include 'db.php';
 $db = getDb();
 
 // Get the Query Parameter
-$id = $_GET['course_id'];
+$courseId = htmlspecialchars($_GET['course_id']);
 
 $query = 'SELECT id, name, course_code FROM course WHERE id = :id';
 $statement = $db->prepare($query);
-$statement->bindValue(':id', $id, PDO::PARAM_INT);
+$statement->bindValue(':id', $courseId, PDO::PARAM_INT);
 $statement->execute();
 $course = $statement->fetch(PDO::FETCH_ASSOC);
 ?>
@@ -26,5 +26,12 @@ $course = $statement->fetch(PDO::FETCH_ASSOC);
     $courseCode = $course['course_code'];
     echo "<h1>Notes for $courseCode - $courseName";
     ?>
+
+    <form action="insert_note.php" method="post">
+        <input type="date" name="date" /><br>
+        <input type="hidden" name="course_id" value="<?php echo $courseId; ?>" /><br>
+        <textarea name="content"></textarea><br>
+        <input type="submit" value="Save Note" />
+    </form>
 </body>
 </html>
