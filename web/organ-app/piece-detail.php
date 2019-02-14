@@ -48,7 +48,7 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
             }
 
             if ($minutes > 0) {
-                $timeDisplay = ($hours > 0 ? ' ':'') . $timeDisplay . $minutes . ' Minutes';
+                $timeDisplay = $timeDisplay . ($hours > 0 ? ' ':'') . $minutes . ' Minutes';
             }
 
             echo "<div class='card'><h2>$date</h2>$timeDisplay</div>";
