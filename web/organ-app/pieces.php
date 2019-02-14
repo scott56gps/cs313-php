@@ -31,7 +31,7 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
         include 'sidebar.php';
         ?>
         <div class="main-content">
-            <h2>My Pieces</h2>
+            <h1>My Pieces</h1>
             <?php
             foreach($pieces as $piece) {
                 $name = $piece['name'];

@@ -24,9 +24,22 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles.css" rel="stylesheet" />
     <title><?php echo $pieceName ?></title>
 </head>
 <body>
-    
+    <?php
+        include 'sidebar.php';
+    ?>
+    <div class="main-content">
+        <h1>Practice Report for <?php echo $pieceName ?></h1>
+        <?php
+        foreach($practiceEvents as $practiceEvent) {
+            $date = $practiceEvent['practice_date'];
+            $duration = $practiceEvent['duration'];
+            echo "<div class='card'><h2>$date</h2>$duration</div>";
+        }
+        ?>
+    </div>
 </body>
 </html>
