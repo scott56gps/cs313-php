@@ -13,3 +13,11 @@ CREATE TABLE note (
     content TEXT NOT NULL,
     course_id INT NOT NULL REFERENCES course(id)
 );
+
+INSERT INTO course(name, course_code) VALUES (
+    'Mobile Application Development',
+    'CS 440'
+), (
+    'Defense Against the Dark Arts',
+    'DRKS 204'
+);
