@@ -27,7 +27,7 @@ $course = $statement->fetch(PDO::FETCH_ASSOC);
     echo "<h1>Notes for $courseCode - $courseName";
     ?>
 
-    <form action="insert_note.php" method="post">
+    <form action="insert-note.php" method="post">
         <input type="date" name="date" /><br>
         <input type="hidden" name="course_id" value="<?php echo $courseId; ?>" /><br>
         <textarea name="content"></textarea><br>
