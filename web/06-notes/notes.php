@@ -10,7 +10,7 @@ $query = 'SELECT id, name, course_code FROM course WHERE id = :id';
 $statement = $db->prepare($query);
 $statement->bindValue(':id', $id, PDO::PARAM_INT);
 $statement->execute();
-$courses = $statement->fetchAll(PDO::FETCH_ASSOC);
+$course = $statement->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +21,10 @@ $courses = $statement->fetchAll(PDO::FETCH_ASSOC);
     <title>Notes</title>
 </head>
 <body>
-    
+    <?php
+    $courseName = $course['name'];
+    $courseCode = $course['course_code'];
+    echo "<h1>Notes for $courseCode - $courseName";
+    ?>
 </body>
 </html>
