@@ -3,11 +3,10 @@ include 'db.php';
 
 $db = getDb();
 
-$query = 'SELECT name, course_code FROM course';
+$query = 'SELECT id, name, course_code FROM course';
 $statement = $db->prepare($query);
 $statement->execute();
 $courses = $statement->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
