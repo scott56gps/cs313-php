@@ -30,7 +30,9 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
             <h2>My Pieces</h2>
             <?php
             foreach($pieces as $piece) {
-                echo '<div class="card"><h2>' . $piece['name'] . '</h2></div>';
+                $name = $piece['name'];
+                $pieceId = $piece['id'];
+                echo "<div class='card'><h2><a href='piece-detail.php?piece_id=$pieceId'>$name</a></h2></div>";
             }
             ?>
         </div>
