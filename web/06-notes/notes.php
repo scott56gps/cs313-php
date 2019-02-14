@@ -33,5 +33,21 @@ $course = $statement->fetch(PDO::FETCH_ASSOC);
         <textarea name="content"></textarea><br>
         <input type="submit" value="Save Note" />
     </form>
+
+    <?php
+    $query = 'SELECT id, date, content FROM note WHERE course_id = :course_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':course_id', $courseId, PDO::PARAM_INT);
+    $statement->execute();
+    $notes = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach($notes as $note) {
+        $date = $note['date'];
+        $content = $note['content'];
+
+        echo "<p>Date: $date</p>";
+        echo "<p>Content: $content</p>";
+    }
+    ?>
 </body>
 </html>
