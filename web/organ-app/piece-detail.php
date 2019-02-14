@@ -37,7 +37,21 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
         foreach($practiceEvents as $practiceEvent) {
             $date = $practiceEvent['practice_date'];
             $duration = $practiceEvent['duration'];
-            echo "<div class='card'><h2>$date</h2>$duration</div>";
+
+            $timestamp = strtotime($duration);
+            $hours = idate('h', $timestamp);
+            $minutes = idate('i', $timestamp);
+
+            $timeDisplay = '';
+            if ($hours > 0) {
+                $timeDisplay = $timeDisplay . $hours . ' Hours';
+            }
+
+            if ($minutes > 0) {
+                $timeDisplay = $timeDisplay . $minutes . ' Minutes';
+            }
+
+            echo "<div class='card'><h2>$date</h2>$timeDisplay</div>";
         }
         ?>
     </div>
