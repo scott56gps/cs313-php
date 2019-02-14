@@ -2,6 +2,12 @@
 include 'db.php';
 
 $db = getDb();
+
+$query = 'SELECT name, course_code FROM course';
+$statement = $db->prepare($query);
+$statement->execute();
+$courses = $statement->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,8 +23,15 @@ $db = getDb();
     <h2>Courses</h2>
 
     <ul>
-        <li></li>
-        <li></li>
+        <?php
+        foreach($courses as $course) {
+            $id = $course['id'];
+            $name = $course['name'];
+            $courseCode = $course['course_code'];
+
+            echo "<li><a href='notes.php?course_id=$id'>$courseCode - $name</a></li>";
+        }
+        ?>
     </ul>
 </body>
 </html>
