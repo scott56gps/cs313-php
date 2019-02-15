@@ -27,6 +27,7 @@ if (isset($_POST["username"])) {
         $_SESSION['student_first_name'] = $row['first_name'];
         $_SESSION['student_last_name'] = $row['last_name'];
         $_SESSION['username'] = $username;
+        $_SESSION['teacher_id'] = $row['teacher_id'];
 
         header("Location: pieces.php");
     }

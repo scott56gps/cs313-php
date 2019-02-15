@@ -8,13 +8,14 @@ CREATE TABLE teacher(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR (50) NOT NULL,
     last_name VARCHAR (50) NOT NULL,
-    email VARCHAR (50) UNIQUE NOT NULL
+    email VARCHAR (50) NOT NULL
 );
 
 CREATE TABLE student(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR (50) NOT NULL,
     last_name VARCHAR (50) NOT NULL,
+    email VARCHAR (50) NOT NULL,
     teacher_id INTEGER REFERENCES teacher(id) ON DELETE RESTRICT,
     username VARCHAR (20) UNIQUE NOT NULL,
     password VARCHAR (20) NOT NULL
