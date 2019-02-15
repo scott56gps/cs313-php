@@ -41,6 +41,9 @@
     border-radius: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .card a {
