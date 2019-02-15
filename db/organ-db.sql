@@ -4,14 +4,14 @@ DROP TABLE IF EXISTS student CASCADE;
 DROP TABLE IF EXISTS teacher CASCADE;
 DROP TABLE IF EXISTS student_piece CASCADE;
 
-CREATE TABLE teacher(
+CREATE TABLE teacher (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR (50) NOT NULL,
     last_name VARCHAR (50) NOT NULL,
     email VARCHAR (50) NOT NULL
 );
 
-CREATE TABLE student(
+CREATE TABLE student (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR (50) NOT NULL,
     last_name VARCHAR (50) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE student(
     password VARCHAR (20) NOT NULL
 );
 
-CREATE TABLE piece(
+CREATE TABLE piece (
     id SERIAL PRIMARY KEY,
     name VARCHAR (50) NOT NULL
 );
@@ -32,7 +32,7 @@ CREATE TABLE student_piece (
     piece_id INTEGER REFERENCES piece(id) NOT NULL
 );
 
-CREATE TABLE practice_event(
+CREATE TABLE practice_event (
     id SERIAL,
     piece_id INTEGER REFERENCES piece(id),
     duration INTERVAL,
@@ -46,9 +46,10 @@ INSERT INTO teacher (first_name, last_name, email) VALUES (
     'dkerr@byui.edu'
 );
 
-INSERT INTO student (first_name, last_name, teacher_id, username, password) VALUES (
+INSERT INTO student (first_name, last_name, email, teacher_id, username, password) VALUES (
     'Scott',
     'Nicholes',
+    'nic15007@byui.edu',
     1,
     'scottie',
     'organist'
