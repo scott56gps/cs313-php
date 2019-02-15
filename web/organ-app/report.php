@@ -38,15 +38,15 @@ $teacher = $statement->fetch(PDO::FETCH_ASSOC);
         <?php
         include 'sidebar.php';
         ?>
-        <div class="report-header">
-            <?php
-            $teacherName = $teacher['first_name'] . ' ' . $teacher['last_name'];
-
-            echo "<h2>Send Report to $teacherName</h2>";
-            ?>
-        </div>
         <div class="main-content">
             <h1>My Report</h1>
+            <div class="report-header">
+                <?php
+                $teacherName = $teacher['first_name'] . ' ' . $teacher['last_name'];
+
+                echo "<h2>Send Report to $teacherName</h2>";
+                ?>
+            </div>
             <?php
             foreach($pieces as $piece) {
                 $name = $piece['name'];
