@@ -20,6 +20,7 @@ session_start();
                     <input id="username" type="text" name="username" />
                     <label for="password">Password</label>
                     <input id="password" type="text" name="password" />
+                    <input type="hidden" name="login" value="false" />
                     <input type="submit" value="Log In" />
                 </form>   
             </div>
