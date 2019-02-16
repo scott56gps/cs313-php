@@ -1,11 +1,8 @@
 <?php
 function getTimeDisplay($duration) {
-    $timestamp = strtotime($totalDuration);
+    $timestamp = strtotime($duration);
     $hours = idate('h', $timestamp);
     $minutes = idate('i', $timestamp);
-
-    echo $hours;
-    echo $minutes;
 
     $timeDisplay = '';
     if ($hours > 0) {

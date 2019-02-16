@@ -40,8 +40,6 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $pieceId = $piece['id'];
                 $totalDuration = $piece['total_duration'];
 
-                echo $totalDuration;
-
                 $timeDisplay = getTimeDisplay($totalDuration);
 
                 echo "<div class='card'><h2><a href='piece-detail.php?piece_id=$pieceId&piece_name=$name'>$name</a></h2>$timeDisplay</div>";
