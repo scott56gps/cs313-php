@@ -1,6 +1,8 @@
 <?php
 include 'db.php';
 
+$db = getDb();
+
 // Get the passed piece name
 $pieceName = htmlspecialchars($_POST["name"]);
 $studentId = htmlspecialchars($_POST["studentId"]);
