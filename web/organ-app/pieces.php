@@ -42,7 +42,7 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
                 // Query database for the practice times for each of these pieces
                 $query = 'SELECT SUM(pe.duration) as total_duration FROM practice_event pe WHERE piece_id = :pieceId';
                 $statement = $db->prepare($query);
-                $statement->bindValue(':pieceId', $studentId, PDO::PARAM_INT);
+                $statement->bindValue(':pieceId', $pieceId, PDO::PARAM_INT);
                 $statement->execute();
                 $totalDuration = $statement->fetch(PDO::FETCH_ASSOC);
 
