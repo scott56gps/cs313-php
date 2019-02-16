@@ -50,6 +50,7 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
                 <form action="add-piece.php" method="post">
                     <label for="nameInput">Name</label>
                     <input id="nameInput" type="text" name="name" />
+                    <input type="hidden" name="studentId" value="<?php echo $studentId; ?>" />
                     <input type="submit" value="Add Piece" />
                 </form>
             </div>
