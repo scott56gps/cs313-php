@@ -17,8 +17,8 @@ $pieceId = $db->lastInsertId('piece_id_seq');
 // Insert a new record into the student_piece table for this piece
 $query = 'INSERT INTO student_piece (student_id, piece_id) VALUES (:studentId, :pieceId)';
 $statement = $db->prepare($query);
-$statement->bindValue(':studentId', $studentId, PDO::PARAM_STR);
-$statement->bindValue(':pieceId', $pieceId, PDO::PARAM_STR);
+$statement->bindValue(':studentId', $studentId, PDO::PARAM_INT);
+$statement->bindValue(':pieceId', $pieceId, PDO::PARAM_INT);
 $statement->execute();
 
 // Redirect back to the pieces page
