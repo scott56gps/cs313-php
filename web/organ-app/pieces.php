@@ -47,7 +47,7 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
             ?>
             <div class="card add-piece">
                 <h2>Add New Piece</h2>
-                <form action="addPiece.php" method="post">
+                <form action="add-piece.php" method="post">
                     <label for="nameInput">Name</label>
                     <input id="nameInput" type="text" name="name" />
                     <input type="submit" value="Add Piece" />
