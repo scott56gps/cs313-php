@@ -4,6 +4,9 @@ function getTimeDisplay($duration) {
     $hours = idate('h', $timestamp);
     $minutes = idate('i', $timestamp);
 
+    echo $hours;
+    echo $minutes;
+
     $timeDisplay = '';
     if ($hours > 0) {
         $timeDisplay = $timeDisplay . $hours . ' Hours';
