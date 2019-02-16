@@ -6,7 +6,7 @@ include 'pieceFunctions.php';
 $db = getDb();
 
 if (!isset($_SESSION['username'])) {
-    header ("Location: login.php");
+    header ("Location: session.php?login=FALSE");
 }
 
 $studentId = $_SESSION['student_id'];
