@@ -56,7 +56,7 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
                 echo "<div class='card'><h2><a href='piece-detail.php?piece_id=$pieceId&piece_name=$name'>$name</a></h2>$timeDisplay</div>";
             }
             ?>
-            <div class="card add-piece">
+            <div class="card add-element">
                 <h2>Add New Piece</h2>
                 <form action="add-piece.php" method="post">
                     <label for="nameInput">Name</label>

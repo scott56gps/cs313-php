@@ -44,7 +44,10 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
                 <button id="clearButton">Clear</button>
             </div>
             <form action="add-practice.php" method="post">
-                
+                <input id="practiceTime" type="hidden" name="practiceDuration" value="00:00:00" />
+                <input type="hidden" name="piece_id" value="<?php echo $pieceId; ?>" />
+                <input type="hidden" name="piece_name" value="<?php echo $pieceName; ?>" />
+                <input type="submit" value="Log Practice" />
             </form>
         </div>
         <?php
