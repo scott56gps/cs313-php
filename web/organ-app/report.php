@@ -2,6 +2,7 @@
 session_start();
 
 include 'db.php';
+include 'pieceFunctions.php';
 $db = getDb();
 
 if (!isset($_SESSION['username'])) {
