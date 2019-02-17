@@ -2,6 +2,7 @@
 session_start();
 
 include 'db.php';
+include 'pieceFunctions.php';
 $db = getDb();
 
 if (!isset($_SESSION['username'])) {
@@ -56,18 +57,7 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
             $date = $practiceEvent['practice_date'];
             $duration = $practiceEvent['duration'];
 
-            $timestamp = strtotime($duration);
-            $hours = idate('H', $timestamp);
-            $minutes = idate('i', $timestamp);
-
-            $timeDisplay = '';
-            if ($hours > 0) {
-                $timeDisplay = $timeDisplay . $hours . ' Hours';
-            }
-
-            if ($minutes >= 0) {
-                $timeDisplay = $timeDisplay . ($hours > 0 ? ' ':'') . $minutes . ' Minutes';
-            }
+            $timeDisplay = getTimeDisplay($duration);
 
             echo "<div class='card'><h2>$date</h2>$timeDisplay</div>";
         }
