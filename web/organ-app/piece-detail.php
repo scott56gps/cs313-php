@@ -57,6 +57,7 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
             $duration = $practiceEvent['duration'];
 
             $timestamp = strtotime($duration);
+            echo $timestamp;
             $hours = idate('h', $timestamp);
             $minutes = idate('i', $timestamp);
 
