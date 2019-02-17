@@ -30,7 +30,7 @@ $teacher = $statement->fetch(PDO::FETCH_ASSOC);
 <html>
     <head>
         <?php
-        echo "<title>$studentFirstName's Pieces</title>";
+        echo "<title>$studentFirstName's Report</title>";
         ?>
         <link href="styles.css" rel="stylesheet" />
     </head>
@@ -44,9 +44,14 @@ $teacher = $statement->fetch(PDO::FETCH_ASSOC);
             <div class="report-header">
                 <?php
                 $teacherName = $teacher['first_name'] . ' ' . $teacher['last_name'];
+                $teacherEmail = $teacher['email'];
 
                 echo "<h2>Send Report to $teacherName</h2>";
                 ?>
+                <form action="send-report.php" method="POST">
+                    <input type="hidden" name="teacher_email" value="<?php echo $teacherEmail; ?>" />
+                    <input type="submit" value="Send Report" />
+                </form>
             </div>
             <?php
             foreach($pieces as $piece) {
