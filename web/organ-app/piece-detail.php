@@ -67,7 +67,7 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $timeDisplay = $timeDisplay . $hours . ' Hours';
             }
 
-            if ($minutes > 0) {
+            if ($minutes >= 0) {
                 $timeDisplay = $timeDisplay . ($hours > 0 ? ' ':'') . $minutes . ' Minutes';
             }
 
