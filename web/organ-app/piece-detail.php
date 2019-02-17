@@ -33,6 +33,20 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
     ?>
     <div class="main-content">
         <h1>Practice Report for <?php echo $pieceName ?></h1>
+        <div class="card add-element">
+            <h2>Start Practice</h2>
+            <div class="stopwatch">
+                <!-- The following code was based on code from https://jsfiddle.net/Daniel_Hug/pvk6p/ -->
+                <!-- The Author is Daniel Hug.  I give him the credit for this Stopwatch. -->
+                <h2><time id="clockDisplay">00:00:00</time></h2>
+                <button id="startButton">Start</button>
+                <button id="stopButton">Stop</button>
+                <button id="clearButton">Clear</button>
+            </div>
+            <form action="add-practice.php" method="post">
+                
+            </form>
+        </div>
         <?php
         foreach($practiceEvents as $practiceEvent) {
             $date = $practiceEvent['practice_date'];
@@ -55,5 +69,6 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
         }
         ?>
     </div>
+    <script src="piece-detail.js"></script>
 </body>
 </html>
