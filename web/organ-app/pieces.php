@@ -47,8 +47,6 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $totalDuration = $statement->fetch(PDO::FETCH_ASSOC);
                 $totalDuration = $totalDuration['total_duration'];
 
-                echo $totalDuration;
-
                 if (!empty($totalDuration)) {
                     $timeDisplay = getTimeDisplay($totalDuration);
                 } else {
