@@ -1,5 +1,6 @@
 var clockDisplay = document.getElementById('clockDisplay')
 var practiceTimeSubmit = document.getElementById('practiceTime')
+var practiceDateSubmit = document.getElementById('practiceDate')
 var startButton = document.getElementById('startButton')
 var stopButton = document.getElementById('stopButton')
 var clearButton = document.getElementById('clearButton')
@@ -7,6 +8,8 @@ var seconds = 0
 var minutes = 0
 var hours = 0
 var t;
+var currentDate = new Date();
+currentDate = currentDate.toISOString().split('T')[0];
 
 function add() {
 	seconds++;
@@ -29,6 +32,8 @@ function add() {
 function timer() {
     t = setTimeout(add, 1000);
 }
+
+practiceDateSubmit.value = currentDate
 
 startButton.addEventListener('click', () => {
     timer();
