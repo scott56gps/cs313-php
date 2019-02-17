@@ -1,5 +1,5 @@
 <?php
 echo $_POST["practiceDuration"];
 
-header("Location: piece-detail.php")
+// header("Location: piece-detail.php")
 ?>
