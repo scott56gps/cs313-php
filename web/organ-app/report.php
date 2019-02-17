@@ -51,7 +51,22 @@ $teacher = $statement->fetch(PDO::FETCH_ASSOC);
             foreach($pieces as $piece) {
                 $name = $piece['name'];
                 $pieceId = $piece['id'];
-                echo "<div class='card'><h2>$name</h2></div>";
+
+                // Get the total duration for this piece
+                $query = 'SELECT SUM(pe.duration) as total_duration FROM practice_event pe WHERE piece_id = :pieceId';
+                $statement = $db->prepare($query);
+                $statement->bindValue(':pieceId', $pieceId, PDO::PARAM_INT);
+                $statement->execute();
+                $totalDuration = $statement->fetch(PDO::FETCH_ASSOC);
+                $totalDuration = $totalDuration['total_duration'];
+
+                if (!empty($totalDuration)) {
+                    $timeDisplay = getTimeDisplay($totalDuration);
+                } else {
+                    $timeDisplay = '';
+                }
+
+                echo "<div class='card'><h2>$name</h2>$timeDisplay</div>";
             }
             ?>
         </div>
