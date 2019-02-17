@@ -45,6 +45,7 @@ $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
                 $statement->bindValue(':pieceId', $pieceId, PDO::PARAM_INT);
                 $statement->execute();
                 $totalDuration = $statement->fetch(PDO::FETCH_ASSOC);
+                $totalDuration = $totalDuration['total_duration'];
 
                 echo $totalDuration;
 
