@@ -9,7 +9,7 @@ $pieceId = $_POST["piece_id"];
 $pieceName = $_POST["piece_name"];
 
 // Insert a new Practice Event for this piece
-$query = 'INSERT INTO practice_event pe (piece_id, duration, practice_date) VALUES (:pieceId, :duration, :practiceDate)';
+$query = 'INSERT INTO practice_event (piece_id, duration, practice_date) VALUES (:pieceId, :duration, :practiceDate)';
 $statement = $db->prepare($query);
 $statement->bindValue(':pieceId', $pieceId, PDO::PARAM_INT);
 $statement->bindValue(':duration', $practiceDuration, PDO::PARAM_STR);
