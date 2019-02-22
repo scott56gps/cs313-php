@@ -8,7 +8,7 @@ function getStudent($username, $db) {
     $statement->execute();
     $row = $statement->fetch(PDO::FETCH_ASSOC);
 
-    return $row
+    return $row;
 }
 
 function login($db) {
