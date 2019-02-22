@@ -49,7 +49,7 @@ $teachers = $statement->fetchAll(PDO::FETCH_ASSOC);
                     <input id="username" type="text" name="username" />
                     <label for="password">Password</label>
                     <input id="password" type="text" name="password" />
-                    <input type="hidden" name="login" value="FALSE" />
+                    <input type="hidden" name="action" value="signUp" />
                     <input type="submit" value="Sign Up" />
                 </form>
             </div>

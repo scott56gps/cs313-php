@@ -20,7 +20,7 @@ session_start();
                     <input id="username" type="text" name="username" />
                     <label for="password">Password</label>
                     <input id="password" type="text" name="password" />
-                    <input type="hidden" name="login" value="TRUE" />
+                    <input type="hidden" name="action" value="login" />
                     <input type="submit" value="Log In" />
                     <a href="signUp.php">Sign Up</a>
                 </form>
