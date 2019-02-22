@@ -22,8 +22,8 @@ session_start();
                     <input id="password" type="text" name="password" />
                     <input type="hidden" name="login" value="TRUE" />
                     <input type="submit" value="Log In" />
+                    <a href="signUp.php">Sign Up</a>
                 </form>
-                <a href="signUp.php">Sign Up</a>
             </div>
         </div>
     </body>
