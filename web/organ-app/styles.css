@@ -52,7 +52,7 @@
     width: 18%;
 }
 
-.card form input[type="submit"] {
+.card form input[type="submit"], .card form input[type="submit"] {
     width: 50%;
 }
 
