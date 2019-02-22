@@ -46,6 +46,12 @@
     align-items: center;
 }
 
+.card form {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+}
+
 .card a {
     color: black;
 }
