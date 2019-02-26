@@ -97,19 +97,19 @@ function logout() {
 }
 
 switch(htmlspecialchars($_POST["action"])) {
-    case 'login':
+    case "login":
         include 'db.php';
         $db = getDb();
         login($db);
         break;
     
-    case 'signUp':
+    case "signUp":
         include 'db.php';
         $db = getDb();
         signUp($db);
         break;
 
-    case 'logout':
+    case "logout":
         logout();
         break;
 }
