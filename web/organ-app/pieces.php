@@ -12,12 +12,16 @@ if (!isset($_SESSION['username'])) {
 $studentId = $_SESSION['student_id'];
 $studentFirstName = $_SESSION['student_first_name'];
 
+echo "studentId: $studentId";
+
 // Get the pieces for this user from the database
 $query = 'SELECT p.id, p.name FROM piece p JOIN student_piece sp ON p.id = sp.piece_id WHERE sp.student_id = :studentId';
 $statement = $db->prepare($query);
 $statement->bindValue(':studentId', $studentId, PDO::PARAM_INT);
 $statement->execute();
 $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+echo $pieces[0]['name'];
 ?>
 <!DOCTYPE html>
 <html>
