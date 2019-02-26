@@ -2,6 +2,8 @@
 // Start the Session
 session_start();
 
+include 'db.php';
+
 function getStudent($username, $db) {
     $statement = $db->prepare('SELECT * FROM student WHERE username=:username');
     $statement->bindValue(':username', $username, PDO::PARAM_STR);
@@ -91,6 +93,7 @@ function signUp($db) {
 }
 
 function logout() {
+    echo "I am in Logout";
     session_destroy();
 
     header("Location: login.php");
@@ -98,7 +101,6 @@ function logout() {
 
 switch(htmlspecialchars($_POST["action"])) {
     case "login":
-        include 'db.php';
         $db = getDb();
         login($db);
         break;
