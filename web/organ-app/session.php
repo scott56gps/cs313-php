@@ -15,7 +15,7 @@ function getStudent($username, $db) {
     $statement->execute();
     $row = $statement->fetch(PDO::FETCH_ASSOC);
 
-    echo "Row: $row";
+    echo "Row: $row<br>";
 
     return $row;
 }
@@ -33,7 +33,7 @@ function login($db) {
         if (!empty($student)) {
             // Username exists
             // Log the user in by adding a session variable
-            echo $row['id'];
+            echo $student['id'];
             // $_SESSION['student_id'] = $row['id'];
             // $_SESSION['student_first_name'] = $row['first_name'];
             // $_SESSION['student_last_name'] = $row['last_name'];
