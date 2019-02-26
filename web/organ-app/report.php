@@ -50,6 +50,7 @@ $teacher = $statement->fetch(PDO::FETCH_ASSOC);
                 ?>
                 <form action="send-report.php" method="POST">
                     <input type="hidden" name="teacher_email" value="<?php echo $teacherEmail; ?>" />
+                    <input type="hidden" name="pieces" value="<?php echo $pieces; ?>" />
                     <input type="submit" value="Send Report" />
                 </form>
             </div>

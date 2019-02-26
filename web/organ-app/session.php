@@ -10,7 +10,7 @@ $getAction = htmlspecialchars($_GET['action']);
 $action = (empty($postAction) ? $getAction : $postAction);
 
 function getStudent($username, $db) {
-    $statement = $db->prepare('SELECT id, first_name, last_name, username, teacher_id FROM student WHERE username=:username');
+    $statement = $db->prepare('SELECT id, first_name, last_name, username, teacher_id, email FROM student WHERE username=:username');
     $statement->bindValue(':username', $username, PDO::PARAM_STR);
     $statement->execute();
     $row = $statement->fetch(PDO::FETCH_ASSOC);
@@ -34,6 +34,7 @@ function login($db) {
             $_SESSION['student_last_name'] = $student['last_name'];
             $_SESSION['username'] = $username;
             $_SESSION['teacher_id'] = $student['teacher_id'];
+            $_SESSION['student_email'] = $student['email'];
 
             header("Location: pieces.php");
         } else {
@@ -79,7 +80,7 @@ function signUp($db) {
 
             // Get the newly added student
             $studentId = $db->lastInsertId('student_id_seq');
-            $query = "SELECT id, first_name, last_name, teacher_id, username FROM student WHERE id = :studentId";
+            $query = "SELECT id, first_name, last_name, teacher_id, username, email FROM student WHERE id = :studentId";
             $statement = $db->prepare($query);
             $statement->bindValue(':studentId', $studentId, PDO::PARAM_INT);
             $statement->execute();
@@ -91,6 +92,7 @@ function signUp($db) {
             $_SESSION['student_last_name'] = $student['last_name'];
             $_SESSION['username'] = $username;
             $_SESSION['teacher_id'] = $student['teacher_id'];
+            $_SESSION['student_email'] = $student['email'];
 
             header("Location: pieces.php");
         } 
