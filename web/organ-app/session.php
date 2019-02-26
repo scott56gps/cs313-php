@@ -15,8 +15,6 @@ function getStudent($username, $db) {
     $statement->execute();
     $row = $statement->fetch(PDO::FETCH_ASSOC);
 
-    echo "Row: $row<br>";
-
     return $row;
 }
 
@@ -26,23 +24,18 @@ function login($db) {
         $username = htmlspecialchars($_POST["username"]);
         $password = htmlspecialchars($_POST["password"]);
 
-        echo "Username: $username";
-
         // Check the Database to see if the username exists
         $student = getStudent($username, $db);
         if (!empty($student)) {
             // Username exists
             // Log the user in by adding a session variable
-            echo "$student" . "['id']<br>";
-            $_SESSION['student_id'] = $row['id'];
-            $_SESSION['student_first_name'] = $row['first_name'];
-            $_SESSION['student_last_name'] = $row['last_name'];
+            $_SESSION['student_id'] = $student['id'];
+            $_SESSION['student_first_name'] = $student['first_name'];
+            $_SESSION['student_last_name'] = $student['last_name'];
             $_SESSION['username'] = $username;
-            $_SESSION['teacher_id'] = $row['teacher_id'];
+            $_SESSION['teacher_id'] = $student['teacher_id'];
 
-            echo "$_SESSION" . "['student_id']<br>";
-
-            // header("Location: pieces.php");
+            header("Location: pieces.php");
         } else {
             // Username is not in the database
             // Prevent user from logging in
