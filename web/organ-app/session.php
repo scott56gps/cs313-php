@@ -29,13 +29,14 @@ function login($db) {
         if (!empty($student)) {
             // Username exists
             // Log the user in by adding a session variable
-            $_SESSION['student_id'] = $row['id'];
-            $_SESSION['student_first_name'] = $row['first_name'];
-            $_SESSION['student_last_name'] = $row['last_name'];
-            $_SESSION['username'] = $username;
-            $_SESSION['teacher_id'] = $row['teacher_id'];
+            echo $row['id'];
+            // $_SESSION['student_id'] = $row['id'];
+            // $_SESSION['student_first_name'] = $row['first_name'];
+            // $_SESSION['student_last_name'] = $row['last_name'];
+            // $_SESSION['username'] = $username;
+            // $_SESSION['teacher_id'] = $row['teacher_id'];
 
-            header("Location: pieces.php");
+            // header("Location: pieces.php");
         } else {
             // Username is not in the database
             // Prevent user from logging in
