@@ -55,13 +55,11 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
         <?php
         foreach($practiceEvents as $practiceEvent) {
             $date = $practiceEvent['practice_date'];
-            echo $date;
             $duration = $practiceEvent['duration'];
 
             $timeDisplay = getTimeDisplay($duration);
-            $formattedDate = date_format($date, "M d Y");
 
-            echo "<div class='card'><h2>$formattedDate</h2>$timeDisplay</div>";
+            echo "<div class='card'><h2>$date</h2>$timeDisplay</div>";
         }
         ?>
     </div>
