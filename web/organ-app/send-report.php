@@ -41,8 +41,6 @@ foreach($pieces as $piece) {
 
 $message .= "</body></html>\r\n";
 
-echo $message . "<br>";
-echo $headers;
 mail($teacherEmail, "Report for $studentFirstName $studentLastName", $message, $headers);
 
 // Clear the pieces session variable
