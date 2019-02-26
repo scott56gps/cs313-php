@@ -3,8 +3,11 @@
 session_start();
 
 include 'db.php';
-$action = htmlspecialchars($_POST['action']) || htmlspecialchars($_GET['action']);
-// $action = htmlspecialchars($_GET['action']);
+
+$postAction = htmlspecialchars($_POST['action']);
+$getAction = htmlspecialchars($_GET['action']);
+
+$action = (empty($postAction) ? $getAction : $postAction);
 
 function getStudent($username, $db) {
     $statement = $db->prepare('SELECT * FROM student WHERE username=:username');
@@ -95,7 +98,6 @@ function signUp($db) {
 }
 
 function logout() {
-    echo "I am in Logout";
     session_destroy();
 
     header("Location: login.php");
