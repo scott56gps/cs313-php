@@ -15,6 +15,8 @@ function getStudent($username, $db) {
     $statement->execute();
     $row = $statement->fetch(PDO::FETCH_ASSOC);
 
+    echo "Row: $row";
+
     return $row;
 }
 
