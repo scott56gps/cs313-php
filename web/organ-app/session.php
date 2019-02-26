@@ -10,7 +10,7 @@ $getAction = htmlspecialchars($_GET['action']);
 $action = (empty($postAction) ? $getAction : $postAction);
 
 function getStudent($username, $db) {
-    $statement = $db->prepare('SELECT * FROM student WHERE username=:username');
+    $statement = $db->prepare('SELECT id, first_name, last_name, username, teacher_id FROM student WHERE username=:username');
     $statement->bindValue(':username', $username, PDO::PARAM_STR);
     $statement->execute();
     $row = $statement->fetch(PDO::FETCH_ASSOC);
@@ -23,6 +23,8 @@ function login($db) {
         // Receive the data from the POST request
         $username = htmlspecialchars($_POST["username"]);
         $password = htmlspecialchars($_POST["password"]);
+
+        echo "Username: $username";
 
         // Check the Database to see if the username exists
         $student = getStudent($username, $db);
