@@ -98,8 +98,8 @@ function signUp($db) {
 }
 
 function logout() {
-    $_SESSION = array();
     session_destroy();
+    $_SESSION = array();
 
     header("Location: login.php");
 }
