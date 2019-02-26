@@ -5,16 +5,12 @@ include 'db.php';
 include 'pieceFunctions.php';
 $db = getDb();
 
-echo "<h1>I AM HERE!</h1>";
-
 if (!isset($_SESSION['username'])) {
     header ("Location: session.php?action=login");
 }
 
 $studentId = $_SESSION['student_id'];
 $studentFirstName = $_SESSION['student_first_name'];
-
-echo "studentId: $studentId";
 
 // Get the pieces for this user from the database
 $query = 'SELECT p.id, p.name FROM piece p JOIN student_piece sp ON p.id = sp.piece_id WHERE sp.student_id = :studentId';
