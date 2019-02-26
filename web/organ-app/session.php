@@ -3,6 +3,7 @@
 session_start();
 
 include 'db.php';
+$action = htmlspecialchars($_POST['action']);
 
 function getStudent($username, $db) {
     $statement = $db->prepare('SELECT * FROM student WHERE username=:username');
@@ -99,14 +100,13 @@ function logout() {
     header("Location: login.php");
 }
 
-switch(htmlspecialchars($_POST["action"])) {
+switch($action) {
     case "login":
         $db = getDb();
         login($db);
         break;
     
     case "signUp":
-        include 'db.php';
         $db = getDb();
         signUp($db);
         break;
