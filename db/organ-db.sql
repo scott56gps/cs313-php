@@ -43,38 +43,46 @@ CREATE TABLE practice_event (
 INSERT INTO teacher (first_name, last_name, email) VALUES (
     'Daniel',
     'Kerr',
-    'dkerr@byui.edu'
-);
-
-INSERT INTO student (first_name, last_name, email, teacher_id, username, password) VALUES (
-    'Scott',
-    'Nicholes',
-    'nic15007@byui.edu',
-    1,
-    'scottie',
-    'organist'
-);
-
-INSERT INTO piece (name) VALUES (
-    'Mit Freuden Zart'
+    'scott93gps@gmail.com'
 ), (
-    'For The Bread Which Thou Hast Broken'
+    'Rebecca',
+    'Partkinson',
+    'scott93gps@gmail.com'
+), (
+    'Christopher',
+    'Houlihan',
+    'scott93gps@gmail.com'
 );
 
-INSERT INTO student_piece (student_id, piece_id) VALUES (
-    1,
-    1
-), (
-    1,
-    2
-);
+-- INSERT INTO student (first_name, last_name, email, teacher_id, username, password) VALUES (
+--     'Scott',
+--     'Nicholes',
+--     'nic15007@byui.edu',
+--     1,
+--     'scottie',
+--     'organist'
+-- );
 
-INSERT INTO practice_event (piece_id, duration, practice_date) VALUES (
-    1,
-    '5 Hours',
-    '2019-01-28'
-), (
-    2,
-    '3 Hours 4 Minutes',
-    '2019-01-15'
-);
+-- INSERT INTO piece (name) VALUES (
+--     'Mit Freuden Zart'
+-- ), (
+--     'For The Bread Which Thou Hast Broken'
+-- );
+
+-- INSERT INTO student_piece (student_id, piece_id) VALUES (
+--     1,
+--     1
+-- ), (
+--     1,
+--     2
+-- );
+
+-- INSERT INTO practice_event (piece_id, duration, practice_date) VALUES (
+--     1,
+--     '5 Hours',
+--     '2019-01-28'
+-- ), (
+--     2,
+--     '3 Hours 4 Minutes',
+--     '2019-01-15'
+-- );
