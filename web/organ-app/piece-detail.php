@@ -58,7 +58,7 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
             $duration = $practiceEvent['duration'];
 
             $timeDisplay = getTimeDisplay($duration);
-            $formattedDate = date_format($date, 'M d Y');
+            $formattedDate = date_format($date, "M d Y");
 
             echo "<div class='card'><h2>$formattedDate</h2>$timeDisplay</div>";
         }
