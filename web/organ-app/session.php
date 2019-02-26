@@ -3,7 +3,8 @@
 session_start();
 
 include 'db.php';
-$action = htmlspecialchars($_POST['action']);
+$action = htmlspecialchars($_POST['action']) || htmlspecialchars($_GET['action']);
+// $action = htmlspecialchars($_GET['action']);
 
 function getStudent($username, $db) {
     $statement = $db->prepare('SELECT * FROM student WHERE username=:username');
@@ -100,21 +101,19 @@ function logout() {
     header("Location: login.php");
 }
 
-echo "I am in the file";
-
-// switch($action) {
-//     case "login":
-//         $db = getDb();
-//         login($db);
-//         break;
+switch($action) {
+    case "login":
+        $db = getDb();
+        login($db);
+        break;
     
-//     case "signUp":
-//         $db = getDb();
-//         signUp($db);
-//         break;
+    case "signUp":
+        $db = getDb();
+        signUp($db);
+        break;
 
-//     case "logout":
-//         logout();
-//         break;
-// }
+    case "logout":
+        logout();
+        break;
+}
 ?>
