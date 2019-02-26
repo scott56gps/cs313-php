@@ -55,6 +55,7 @@ $practiceEvents = $statement->fetchAll(PDO::FETCH_ASSOC);
         <?php
         foreach($practiceEvents as $practiceEvent) {
             $date = $practiceEvent['practice_date'];
+            echo $date;
             $duration = $practiceEvent['duration'];
 
             $timeDisplay = getTimeDisplay($duration);
