@@ -18,8 +18,6 @@ $statement = $db->prepare($query);
 $statement->bindValue(':studentId', $studentId, PDO::PARAM_INT);
 $statement->execute();
 $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-echo $pieces[0]['name'];
 ?>
 <!DOCTYPE html>
 <html>

@@ -41,10 +41,10 @@ foreach($pieces as $piece) {
 
 echo $message . "<br>";
 echo $headers;
-// mail($teacherEmail, "Report for $studentFirstName $studentLastName", $message, $headers);
+mail($teacherEmail, "Report for $studentFirstName $studentLastName", $message, $headers);
 
 // Clear the pieces session variable
 unset($_SESSION['sending_pieces']);
 
-// header("Location: report.php");
+header("Location: report.php");
 ?>
