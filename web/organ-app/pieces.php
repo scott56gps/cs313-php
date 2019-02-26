@@ -5,8 +5,10 @@ include 'db.php';
 include 'pieceFunctions.php';
 $db = getDb();
 
+echo "<h1>I AM HERE!</h1>";
+
 if (!isset($_SESSION['username'])) {
-    header ("Location: session.php?login=FALSE");
+    header ("Location: session.php?action=login");
 }
 
 $studentId = $_SESSION['student_id'];
