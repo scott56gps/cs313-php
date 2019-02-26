@@ -1,6 +1,6 @@
 <?php
 $teacherEmail = htmlspecialchars($_POST['teacher_email']);
-$pieces = $_POST['pieces'];
+$pieces = htmlspecialchars($_POST['pieces']);
 
 $studentFirstName = $_SESSION['student_first_name'];
 $studentLastName = $_SESSION['student_last_name'];
