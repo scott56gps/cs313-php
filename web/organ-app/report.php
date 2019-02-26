@@ -19,6 +19,9 @@ $statement->bindValue(':studentId', $studentId, PDO::PARAM_INT);
 $statement->execute();
 $pieces = $statement->fetchAll(PDO::FETCH_ASSOC);
 
+// Set a Session variable instead of posting
+$_SESSION['sending_pieces'] = $pieces;
+
 // Get the teacher for this user
 $query = "SELECT first_name, last_name, email FROM teacher WHERE id = :teacherId";
 $statement = $db->prepare($query);
@@ -50,7 +53,6 @@ $teacher = $statement->fetch(PDO::FETCH_ASSOC);
                 ?>
                 <form action="send-report.php" method="POST">
                     <input type="hidden" name="teacher_email" value="<?php echo $teacherEmail; ?>" />
-                    <input type="hidden" name="pieces[]" value="<?php echo $pieces; ?>" />
                     <input type="submit" value="Send Report" />
                 </form>
             </div>

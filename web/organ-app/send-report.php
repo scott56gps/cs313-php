@@ -1,10 +1,10 @@
 <?php
 $teacherEmail = htmlspecialchars($_POST['teacher_email']);
-$pieces = htmlspecialchars($_POST['pieces']);
 
 $studentFirstName = $_SESSION['student_first_name'];
 $studentLastName = $_SESSION['student_last_name'];
 $studentEmail = $_SESSION['student_email'];
+$pieces = $_SESSION['sending_pieces'];
 
 // Send an email to the teacher
 $message = "";
@@ -36,6 +36,9 @@ foreach($pieces as $piece) {
 echo $message . "<br>";
 echo $headers;
 // mail($teacherEmail, "Report for $studentFirstName $studentLastName", $message, $headers);
+
+// Clear the pieces session variable
+unset($_SESSION['sending_pieces']);
 
 // header("Location: report.php");
 ?>
