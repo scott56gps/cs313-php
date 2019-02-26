@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $teacherEmail = htmlspecialchars($_POST['teacher_email']);
 
 $studentFirstName = $_SESSION['student_first_name'];
