@@ -100,19 +100,21 @@ function logout() {
     header("Location: login.php");
 }
 
-switch($action) {
-    case "login":
-        $db = getDb();
-        login($db);
-        break;
-    
-    case "signUp":
-        $db = getDb();
-        signUp($db);
-        break;
+echo "I am in the file";
 
-    case "logout":
-        logout();
-        break;
-}
+// switch($action) {
+//     case "login":
+//         $db = getDb();
+//         login($db);
+//         break;
+    
+//     case "signUp":
+//         $db = getDb();
+//         signUp($db);
+//         break;
+
+//     case "logout":
+//         logout();
+//         break;
+// }
 ?>
