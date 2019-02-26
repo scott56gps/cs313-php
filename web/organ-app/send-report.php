@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+include 'db.php';
+$db = getDb();
+
 $teacherEmail = htmlspecialchars($_POST['teacher_email']);
 
 $studentFirstName = $_SESSION['student_first_name'];
