@@ -101,13 +101,16 @@ switch(htmlspecialchars($_POST["action"])) {
         include 'db.php';
         $db = getDb();
         login($db);
+        break;
     
     case 'signUp':
         include 'db.php';
         $db = getDb();
         signUp($db);
+        break;
 
     case 'logout':
         logout();
+        break;
 }
 ?>
