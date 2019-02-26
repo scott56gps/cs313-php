@@ -13,7 +13,7 @@ $studentEmail = $_SESSION['student_email'];
 $pieces = $_SESSION['sending_pieces'];
 
 // Send an email to the teacher
-$message = "";
+$message = "<!DOCTYPE html><html><body>\r\n";
 $headers = "From: $studentEmail\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
@@ -36,8 +36,10 @@ foreach($pieces as $piece) {
         $timeDisplay = '';
     }
 
-    $message .= "<div><h2>$name - $timeDisplay</h2></div><br>";
+    $message .= "<div><h2>$name - $timeDisplay</h2></div><br>\r\n";
 }
+
+$message .= "</body></html>\r\n";
 
 echo $message . "<br>";
 echo $headers;
